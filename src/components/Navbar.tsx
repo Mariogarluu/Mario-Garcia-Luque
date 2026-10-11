@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X, Terminal, ArrowUpRight, Network, Sparkles } from 'lucide-react';
+import { Sun, Moon, Menu, X, Terminal, ArrowUpRight } from 'lucide-react';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
-  const { theme, toggleTheme, bgEffect, toggleBgEffect } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -54,25 +54,6 @@ export const Navbar: React.FC = () => {
 
         {/* Right Action Buttons */}
         <div className="nav-actions">
-          {/* Background Effect Switcher */}
-          <button
-            onClick={toggleBgEffect}
-            className="theme-toggle-btn bg-effect-btn"
-            aria-label="Alternar efecto de fondo"
-            title={`Fondo interactivo actual: ${bgEffect === 'neural' ? 'Red Neuronal' : 'Nebulosa Cósmica'}. Clic para alternar.`}
-          >
-            <div className="theme-toggle-slider">
-              {bgEffect === 'neural' ? (
-                <Network size={16} className="bg-btn-icon green" />
-              ) : (
-                <Sparkles size={16} className="bg-btn-icon purple" />
-              )}
-            </div>
-            <span className="theme-label-hint">
-              {bgEffect === 'neural' ? 'Red' : 'Nebulosa'}
-            </span>
-          </button>
-
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
