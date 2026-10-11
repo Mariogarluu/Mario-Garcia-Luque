@@ -13,6 +13,7 @@ import {
   Heart,
   Network
 } from 'lucide-react';
+import { TechIcon } from './TechIcons';
 import './Experience.css';
 
 export const Experience: React.FC = () => {
@@ -113,8 +114,9 @@ export const Experience: React.FC = () => {
                 {/* Tech Pills */}
                 <div className="exp-tech-stack">
                   {item.technologies.map((tech, tIdx) => (
-                    <span key={tIdx} className="badge badge-purple">
-                      {tech}
+                    <span key={tIdx} className="badge badge-purple tech-tag-with-icon">
+                      <TechIcon name={tech} size={14} />
+                      <span>{tech}</span>
                     </span>
                   ))}
                 </div>

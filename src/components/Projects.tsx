@@ -15,6 +15,7 @@ import {
   Layers
 } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import { TechIcon } from './TechIcons';
 import './Projects.css';
 
 export const Projects: React.FC = () => {
@@ -242,8 +243,9 @@ export const Projects: React.FC = () => {
                   <div className="project-card-footer">
                     <div className="project-tech-tags">
                       {project.technologies.map((tech, tIdx) => (
-                        <span key={tIdx} className="badge badge-purple">
-                          {tech}
+                        <span key={tIdx} className="badge badge-purple tech-tag-with-icon">
+                          <TechIcon name={tech} size={14} />
+                          <span>{tech}</span>
                         </span>
                       ))}
                     </div>

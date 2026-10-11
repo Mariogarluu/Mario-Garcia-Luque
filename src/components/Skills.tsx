@@ -7,9 +7,25 @@ import {
   Database, 
   Cpu, 
   Bot, 
-  CheckCircle2 
+  Sparkles
 } from 'lucide-react';
+import { TechIcon } from './TechIcons';
 import './Skills.css';
+
+const coreTechStack = [
+  { name: 'React.js', label: 'React' },
+  { name: 'TypeScript', label: 'TypeScript' },
+  { name: 'Supabase', label: 'Supabase' },
+  { name: 'PostgreSQL', label: 'PostgreSQL' },
+  { name: 'Node.js', label: 'Node.js' },
+  { name: 'Next.js', label: 'Next.js' },
+  { name: 'Tailwind CSS', label: 'Tailwind CSS' },
+  { name: 'C / C++', label: 'C / C++ (42)' },
+  { name: 'Python', label: 'Python' },
+  { name: 'Git', label: 'Git & GitHub' },
+  { name: 'Linux', label: 'Linux' },
+  { name: 'Vite', label: 'Vite' },
+];
 
 export const Skills: React.FC = () => {
   const { skills } = portfolioData;
@@ -44,6 +60,24 @@ export const Skills: React.FC = () => {
           <p className="section-subtitle">
             Herramientas dominadas en proyectos de empresa, algoritmia de bajo nivel y arquitectura web moderna.
           </p>
+        </div>
+
+        {/* Core Tech Stack Showcase Banner */}
+        <div className="core-tech-showcase glass-card">
+          <div className="core-tech-header">
+            <Sparkles size={16} className="core-tech-sparkle" />
+            <span className="core-tech-title">Tecnologías Principales en Producción</span>
+          </div>
+          <div className="core-tech-badges">
+            {coreTechStack.map((tech, idx) => (
+              <div key={idx} className="core-tech-item" title={tech.name}>
+                <div className="core-tech-logo-wrapper">
+                  <TechIcon name={tech.name} size={22} />
+                </div>
+                <span className="core-tech-name">{tech.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Category Filters */}
@@ -110,8 +144,8 @@ export const Skills: React.FC = () => {
                       key={itemIdx} 
                       className={`skill-pill ${isAdvanced ? 'advanced' : ''}`}
                     >
-                      <span className="skill-pill-bullet">
-                        <CheckCircle2 size={14} className="bullet-icon" />
+                      <span className="skill-pill-logo">
+                        <TechIcon name={item.name} size={18} />
                       </span>
                       <span className="skill-pill-name">{item.name}</span>
                       {item.level && (
@@ -128,3 +162,4 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
+

@@ -1,3 +1,92 @@
+/* Core Tech Stack Showcase Banner */
+.core-tech-showcase {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.core-tech-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.core-tech-sparkle {
+  color: var(--green-400);
+}
+
+[data-theme="light"] .core-tech-sparkle {
+  color: var(--green-600);
+}
+
+.core-tech-title {
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.core-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.core-tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 12px;
+  background: var(--bg-body);
+  border: 1px solid var(--border-light);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.core-tech-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple-400);
+  background: var(--bg-surface-hover);
+  box-shadow: 0 4px 18px var(--purple-glow);
+}
+
+[data-theme="light"] .core-tech-item:hover {
+  border-color: var(--purple-500);
+}
+
+.core-tech-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.core-tech-item:hover .core-tech-logo-wrapper {
+  transform: scale(1.1);
+}
+
+.core-tech-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 /* Filter Bar */
 .skills-filter-bar {
   display: flex;
@@ -129,22 +218,34 @@
   transform: translateX(3px);
 }
 
+.skill-pill-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.65rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--bg-body);
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-pill:hover .skill-pill-logo {
+  transform: scale(1.12);
+  border-color: var(--purple-400);
+  box-shadow: 0 0 10px var(--purple-glow);
+}
+
+[data-theme="light"] .skill-pill:hover .skill-pill-logo {
+  border-color: var(--purple-500);
+}
+
 .skill-pill-bullet {
   display: flex;
   align-items: center;
   margin-right: 0.55rem;
-}
-
-.bullet-icon {
-  color: var(--green-400);
-}
-
-[data-theme="light"] .bullet-icon {
-  color: var(--green-600);
-}
-
-.special-icon {
-  color: var(--purple-400);
 }
 
 .skill-pill-name {
