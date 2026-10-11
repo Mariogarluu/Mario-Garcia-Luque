@@ -1,0 +1,138 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-icon.purple { color: var(--purple-400); }
+.service-icon.green { color: var(--green-400); }
+
+[data-theme="light"] .service-icon.purple { color: var(--purple-500); }
+[data-theme="light"] .service-icon.green { color: var(--green-600); }
+
+.service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.service-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.service-description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+  margin-bottom: 1.25rem;
+}
+
+.service-ideal {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.25rem;
+}
+
+.ideal-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--purple-400);
+  margin-bottom: 0.2rem;
+}
+
+[data-theme="light"] .ideal-label {
+  color: var(--purple-500);
+}
+
+.ideal-text {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.service-deliverables {
+  margin-bottom: 1.75rem;
+}
+
+.deliverables-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+}
+
+.deliverables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.deliv-icon {
+  color: var(--green-400);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+[data-theme="light"] .deliv-icon {
+  color: var(--green-600);
+}
+
+.service-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.service-cta {
+  width: 100%;
+}
