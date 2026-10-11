@@ -1,0 +1,55 @@
+/* ==========================================================================
+   NEURAL BACKGROUND COMPONENT STYLES
+   Interactive Synaptic Network & Constellation Nodes
+   Optimized with pure GPU 60-120fps canvas rendering
+   ========================================================================== */
+
+.neural-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  user-select: none;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.neural-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  opacity: 1;
+  transform: translateZ(0);
+  transition: opacity 0.25s ease;
+}
+
+[data-theme="light"] .neural-canvas {
+  opacity: 0.92;
+}
+
+/* Subtle modern engineering grid backdrop */
+.neural-grid-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 54px 54px;
+  opacity: 0.75;
+  mask-image: radial-gradient(circle at 50% 50%, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 70%, transparent 100%);
+}
+
+.portfolio-app {
+  position: relative;
+  z-index: 1;
+}

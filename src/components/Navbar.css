@@ -138,7 +138,23 @@
   color: var(--green-400);
 }
 
+.bg-btn-icon.green {
+  color: var(--green-400);
+}
+
+.bg-btn-icon.purple {
+  color: var(--purple-400);
+}
+
 [data-theme="light"] .theme-toggle-slider {
+  color: var(--purple-500);
+}
+
+[data-theme="light"] .bg-btn-icon.green {
+  color: var(--green-600);
+}
+
+[data-theme="light"] .bg-btn-icon.purple {
   color: var(--purple-500);
 }
 

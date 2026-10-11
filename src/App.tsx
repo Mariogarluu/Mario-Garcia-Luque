@@ -1,6 +1,7 @@
 import React from 'react';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { NebulaBackground } from './components/NebulaBackground';
+import { NeuralBackground } from './components/NeuralBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -12,10 +13,15 @@ import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
+const ActiveBackground: React.FC = () => {
+  const { bgEffect } = useTheme();
+  return bgEffect === 'neural' ? <NeuralBackground /> : <NebulaBackground />;
+};
+
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <NebulaBackground />
+      <ActiveBackground />
       <div className="portfolio-app">
         <Navbar />
         <main>
