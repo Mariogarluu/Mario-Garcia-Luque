@@ -513,6 +513,66 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, size = 18, className =
     );
   }
 
+  // 43. Cursor AI IDE
+  if (norm.includes('cursor')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        <path d="M12 2.5L3.5 7.4v9.2L12 21.5l8.5-4.9V7.4L12 2.5z" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M12 21.5V11.8M12 11.8L3.5 7.4M12 11.8l8.5-4.4" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="12" cy="11.8" r="2.2" fill="#38BDF8" />
+      </svg>,
+      'Cursor AI IDE'
+    );
+  }
+
+  // 44. Google Antigravity
+  if (norm.includes('antigravity')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        <defs>
+          <linearGradient id="antigrav-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#818CF8" />
+            <stop offset="0.5" stopColor="#C084FC" />
+            <stop offset="1" stopColor="#38BDF8" />
+          </linearGradient>
+        </defs>
+        <path d="M12 2C12 7.52 7.52 12 2 12C7.52 12 12 16.48 12 22C12 16.48 16.48 12 22 12C16.48 12 12 7.52 12 2Z" fill="url(#antigrav-grad)" />
+        <circle cx="18" cy="6" r="2" fill="#38BDF8" />
+        <circle cx="6" cy="18" r="1.5" fill="#C084FC" />
+      </svg>,
+      'Google Antigravity'
+    );
+  }
+
+  // 45. Model Context Protocol (MCP)
+  if (norm.includes('mcp') || norm.includes('model context')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#A855F7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="4.5" r="2.8" stroke="#C084FC" fill="#8B5CF6" fillOpacity="0.3" />
+        <circle cx="4.8" cy="18.5" r="2.8" stroke="#34D399" fill="#10B981" fillOpacity="0.3" />
+        <circle cx="19.2" cy="18.5" r="2.8" stroke="#38BDF8" fill="#0284C7" fillOpacity="0.3" />
+        <line x1="12" y1="7.3" x2="6.8" y2="15.8" stroke="#C084FC" />
+        <line x1="12" y1="7.3" x2="17.2" y2="15.8" stroke="#38BDF8" />
+        <line x1="7.8" y1="18.5" x2="16.2" y2="18.5" stroke="#34D399" strokeDasharray="2 2" />
+      </svg>,
+      'Model Context Protocol (MCP)'
+    );
+  }
+
+  // 46. Rules & Config (.cursorrules, AGENTS.md, Skills)
+  if (norm.includes('rule') || norm.includes('agents.md') || norm.includes('prompt')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#F59E0B" />
+        <polyline points="14 2 14 8 20 8" stroke="#FBBF24" />
+        <line x1="16" y1="13" x2="8" y2="13" stroke="#FBBF24" />
+        <line x1="16" y1="17" x2="8" y2="17" stroke="#FBBF24" />
+        <polyline points="10 9 9 9 8 9" stroke="#FBBF24" />
+      </svg>,
+      'Rules & Agentes de IA'
+    );
+  }
+
   // Default Fallback: Clean code glyph
   return wrap(
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

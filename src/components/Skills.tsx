@@ -17,13 +17,14 @@ const coreTechStack = [
   { name: 'TypeScript', label: 'TypeScript' },
   { name: 'Supabase', label: 'Supabase' },
   { name: 'PostgreSQL', label: 'PostgreSQL' },
+  { name: 'Cursor', label: 'Cursor AI' },
+  { name: 'Google Antigravity', label: 'Antigravity' },
   { name: 'Node.js', label: 'Node.js' },
   { name: 'Next.js', label: 'Next.js' },
   { name: 'Tailwind CSS', label: 'Tailwind CSS' },
   { name: 'C / C++', label: 'C / C++ (42)' },
   { name: 'Python', label: 'Python' },
   { name: 'Git', label: 'Git & GitHub' },
-  { name: 'Linux', label: 'Linux' },
   { name: 'Vite', label: 'Vite' },
 ];
 

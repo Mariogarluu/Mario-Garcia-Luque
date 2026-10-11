@@ -267,3 +267,132 @@
   line-height: 1.6;
   max-width: 440px;
 }
+
+/* WhatsApp Channel styling */
+.contact-channel-wa {
+  border-color: rgba(37, 211, 102, 0.25);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.channel-icon-wa {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.3);
+}
+
+.channel-icon-wa-glyph {
+  color: #25D366;
+}
+
+.channel-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.channel-badge-chip {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.channel-value-wa {
+  color: #25D366 !important;
+}
+
+.channel-action-wa:hover {
+  color: #25D366 !important;
+  border-color: #25D366 !important;
+}
+
+/* Success Actions Grid */
+.success-actions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 0.5rem;
+}
+
+.success-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn-wa-action {
+  color: #25D366;
+  border-color: rgba(37, 211, 102, 0.3);
+}
+
+.btn-wa-action:hover {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: #25D366;
+  color: #25D366;
+}
+
+.btn-gmail-action {
+  color: #EA4335;
+  border-color: rgba(234, 67, 53, 0.3);
+}
+
+.btn-gmail-action:hover {
+  background: rgba(234, 67, 53, 0.1);
+  border-color: #EA4335;
+  color: #EA4335;
+}
+
+.form-reset-btn {
+  margin-top: 0.75rem;
+}
+
+/* Instant Notice below form button */
+.form-instant-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.instant-wa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #25D366;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.instant-wa-link:hover {
+  opacity: 0.85;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

@@ -64,12 +64,12 @@ export const About: React.FC = () => {
               <div className="about-workspace-box">
                 <img 
                   src={about.workspaceImage} 
-                  alt="Workspace y entorno de desarrollo de Mario" 
+                  alt="Desarrollo de software y programación web" 
                   className="about-workspace-img"
                   loading="lazy"
                 />
                 <div className="workspace-badge font-mono">
-                  <span>⚡ Entorno de trabajo · VS Code & Linux</span>
+                  <span>⚡ Desarrollo Web & Flujos Asistidos por IA</span>
                 </div>
               </div>
             )}

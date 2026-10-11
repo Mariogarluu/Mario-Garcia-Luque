@@ -122,7 +122,7 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Mario García Luque",
     role: "Full Stack & Frontend Developer",
-    headline: "Desarrollador Web & Full Stack | React · TypeScript · Supabase · Node.js · Soluciones con IA",
+    headline: "Desarrollador Web & Full Stack | React · TypeScript · Supabase · Node.js · IDEs con IA (Antigravity & Cursor, MCP, Rules)",
     location: "Alhaurín de la Torre, Málaga, España",
     postalCode: "29130",
     email: "garcialuquemario7@gmail.com",
@@ -149,9 +149,9 @@ export const portfolioData: PortfolioData = {
       id: "fullstack-mvp",
       title: "Desarrollo Web Full Stack & MVPs",
       subtitle: "De la idea a producción en semanas",
-      description: "Construyo aplicaciones web completas combinando React/Next.js con Supabase y Node.js. Autenticación, base de datos relacional PostgreSQL, APIs REST y despliegue automatizado.",
+      description: "Construyo aplicaciones web completas combinando React/Next.js con Supabase y Node.js. Flujos de desarrollo de alta velocidad asistidos por IDEs con IA (Cursor, Antigravity, MCPs) para iterar sin perder calidad ni seguridad.",
       idealFor: "Empresas en crecimiento, startups y clientes que necesitan una solución robusta y escalable sin sobreingeniería.",
-      deliverables: ["Arquitectura modular y escalable", "Base de datos y Auth con Supabase", "Panel de administración interactivo", "Despliegue en Vercel o Cloud"],
+      deliverables: ["Arquitectura modular y escalable", "Base de datos y Auth con Supabase", "Panel de administración interactivo", "Despliegue en Vercel o Cloud", "Flujos asistidos por IA (MCP & Rules)"],
       icon: "layers"
     },
     {
@@ -174,11 +174,12 @@ export const portfolioData: PortfolioData = {
     }
   ],
   about: {
-    shortBio: "Desarrollador Full Stack y Frontend con mentalidad resolutiva. Ayudo a empresas y clientes freelance a construir software ágil, modular y atractivo, combinando el rigor algorítmico de 42 Málaga con la solidez de React, Supabase y herramientas de IA.",
+    shortBio: "Desarrollador Full Stack y Frontend con mentalidad resolutiva. Ayudo a empresas y clientes freelance a construir software ágil, modular y atractivo, combinando el rigor algorítmico de 42 Málaga con la solidez de React, Supabase y el dominio de IDEs con IA (Antigravity, Cursor, Rules y MCPs).",
     workspaceImage: "/workspace.jpg",
     extendedBio: [
       "Mi trayectoria no empezó en una plantilla genérica, sino desde los cimientos: comencé entendiendo el hardware y las redes en SMR, profundicé en la arquitectura cliente/servidor en DAW, entrené la tolerancia a la frustración y la gestión de memoria sin dependencias en 42 Málaga (C/C++), y consolidé el desarrollo multiplataforma en DAM.",
-      "En el terreno profesional he trabajado en proyectos reales creando interfaces interactivas con React, implementando arquitecturas con Supabase y PostgreSQL, e integrando flujos de Inteligencia Artificial para acelerar entregas y resolver necesidades concretas de negocio.",
+      "En el terreno profesional combino rigor técnico con herramientas de vanguardia: desarrollo aplicaciones web de alto rendimiento con React, TypeScript, Supabase y PostgreSQL, integrando flujos de Inteligencia Artificial para resolver necesidades concretas de negocio.",
+      "Cuento con amplia experiencia práctica en IDEs potenciados por IA de última generación como Google Antigravity y Cursor, dominando la arquitectura de Rules (.cursorrules, AGENTS.md, Skills personalizadas) y la integración de servidores mediante el protocolo MCP (Model Context Protocol). Esta maestría me permite iterar a máxima velocidad manteniendo una arquitectura limpia y altos estándares de software.",
       "Tanto si buscas un desarrollador que se integre en tu plantilla con rapidez y autonomía, como si necesitas un profesional freelance que materialice tu proyecto con compromiso total, aporto código limpio, comunicación clara y orientación a resultados."
     ],
     softSkills: [
@@ -251,20 +252,22 @@ export const portfolioData: PortfolioData = {
         { name: "Gestión manual de memoria (Punteros)", level: "Avanzado" },
         { name: "Estructuras de datos y Algoritmos", level: "Avanzado" },
         { name: "Java & C# (POO multiplataforma)", level: "Intermedio" },
-        { name: "Linux & Terminal / Shell Scripting", level: "Avanzado" },
+        { name: "Terminal Bash & Entornos Unix/Linux (42 & SMR)", level: "Avanzado" },
         { name: "Redes y Protocolos TCP/IP (SMR)", level: "Avanzado" }
       ]
     },
     {
-      category: "IA & Ecosistema de Productividad",
-      icon: "tool",
+      category: "IDEs con IA & Ecosistema Agéntico",
+      icon: "bot",
       items: [
-        { name: "Integración de APIs de IA (LLMs)", level: "Avanzado" },
+        { name: "Google Antigravity & Cursor (AI IDEs)", level: "Avanzado" },
+        { name: "Configuración de Rules (.cursorrules, AGENTS.md)", level: "Avanzado" },
+        { name: "Model Context Protocol (MCP) & Servidores MCP", level: "Avanzado" },
+        { name: "Skills & Flujos de Agentes Autónomos", level: "Avanzado" },
+        { name: "Integración de APIs de IA & LLMs", level: "Avanzado" },
         { name: "Git, GitHub & Flujos CI/CD", level: "Avanzado" },
-        { name: "Vite, npm & Tooling moderno", level: "Avanzado" },
-        { name: "WordPress & WooCommerce a medida", level: "Intermedio" },
-        { name: "VS Code & Herramientas de depuración", level: "Avanzado" },
-        { name: "Android Studio & Unity", level: "Intermedio" }
+        { name: "VS Code & Tooling de Depuración", level: "Avanzado" },
+        { name: "Vite, npm & Entornos de Desarrollo", level: "Avanzado" }
       ]
     }
   ],
