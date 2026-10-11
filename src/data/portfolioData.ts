@@ -361,6 +361,7 @@ export const portfolioData: PortfolioData = {
       id: "42malaga",
       degree: "Formación en Software y Algoritmia Rigurosa (Main Core)",
       institution: "42 Málaga (Fundación Telefónica)",
+      institutionImage: "/42-malaga.jpg",
       location: "Málaga",
       period: "12/2024 – 07/2025",
       topics: "Programación en C de bajo nivel, gestión estricta de memoria (punteros, memory leaks sin valgrind errors), estructuras de datos, algoritmia y resolución P2P sin librerías estándar.",
