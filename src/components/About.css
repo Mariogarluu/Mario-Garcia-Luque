@@ -225,6 +225,27 @@
   color: var(--text-secondary);
 }
 
+.testimonial-company-logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-company-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .testimonial-linkedin-link {
   width: 34px;
   height: 34px;

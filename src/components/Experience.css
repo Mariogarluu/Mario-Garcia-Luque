@@ -71,10 +71,48 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-light);
+}
+
+.exp-role-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.exp-company-logo-box {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover .exp-company-logo-box {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.exp-company-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.exp-role-company {
+  display: flex;
+  flex-direction: column;
 }
 
 .exp-role {

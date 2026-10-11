@@ -71,6 +71,22 @@ export const Education: React.FC = () => {
                 </div>
 
                 <div className="edu-card-content">
+                  {item.institutionImage && (
+                    <div className="edu-campus-image-box">
+                      <img 
+                        src={item.institutionImage} 
+                        alt={item.institution} 
+                        className="edu-campus-img" 
+                        loading="lazy"
+                      />
+                      <div className="edu-campus-overlay"></div>
+                      <span className="edu-campus-badge">
+                        <MapPin size={11} />
+                        <span>Sede {item.institution}</span>
+                      </span>
+                    </div>
+                  )}
+
                   {is42 && (
                     <div className="edu-badge-42">
                       <Sparkles size={12} />

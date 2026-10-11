@@ -33,6 +33,7 @@ export interface Experience {
   id: string;
   role: string;
   company: string;
+  companyLogo?: string;
   location: string;
   period: string;
   description: string;
@@ -53,6 +54,7 @@ export interface Education {
   id: string;
   degree: string;
   institution: string;
+  institutionImage?: string;
   location: string;
   period: string;
   topics: string;
@@ -108,6 +110,7 @@ export interface PortfolioData {
     author: string;
     role: string;
     company: string;
+    companyLogo?: string;
     text: string;
     badge: string;
     avatar: string;
@@ -270,6 +273,7 @@ export const portfolioData: PortfolioData = {
       id: "ld-quantum",
       role: "Desarrollador Full Stack / Web (React & Supabase)",
       company: "LD Quantum",
+      companyLogo: "/ldquantum.png",
       location: "Alhaurín de la Torre, Málaga",
       period: "01/2026 – 06/2026",
       description: "Desarrollo frontend avanzado con React.js e interfaces orientadas a la experiencia de usuario, integrando soluciones de IA y gestionando la capa backend con Supabase y PostgreSQL.",
@@ -284,10 +288,11 @@ export const portfolioData: PortfolioData = {
     {
       id: "angel-on-watch",
       role: "Desarrollador de Aplicaciones Web",
-      company: "Angel on Watch",
+      company: "Angels Caring (Angel on Watch)",
+      companyLogo: "/angels-caring.jfif",
       location: "Málaga / Remoto",
       period: "04/2025 – 09/2025",
-      description: "Creación, desarrollo y escalabilidad de plataforma web interactiva basada en React y Node.js, implementando arquitectura modular desacoplada.",
+      description: "Creación, desarrollo y escalabilidad de plataforma web interactiva basada en React y Node.js para Angels Caring, implementando arquitectura modular desacoplada.",
       achievements: [
         "Construcción de módulos y vistas dinámicas con React y gestión centralizada del estado.",
         "Integración y consumo de servicios y APIs RESTful externas e internas con alto volumen de datos.",
@@ -300,6 +305,7 @@ export const portfolioData: PortfolioData = {
       id: "zienideas",
       role: "Desarrollador Web (Prácticas)",
       company: "ZIENideas / Factoría Kreativa",
+      companyLogo: "/zien-ideas.png",
       location: "Málaga, España",
       period: "03/2024 – 06/2024",
       description: "Diseño, maquetación y mantenimiento de páginas web corporativas y tiendas online personalizadas, garantizando diseño responsive y optimización de carga.",
@@ -337,6 +343,7 @@ export const portfolioData: PortfolioData = {
       id: "dam",
       degree: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
       institution: "CPFP Alan Turing",
+      institutionImage: "/alan-turing.jfif",
       location: "Málaga",
       period: "2024 – 2026",
       topics: "Arquitectura multicapa, Kotlin, Android Studio, Spring/Java, C#, bases de datos relacionales avanzadas, seguridad y diseño de APIs.",
@@ -371,6 +378,7 @@ export const portfolioData: PortfolioData = {
       id: "daw",
       degree: "Técnico Superior en Desarrollo de Aplicaciones Web (DAW)",
       institution: "I.E.S. Gerald Brenan",
+      institutionImage: "/gerald-brenan.jpg",
       location: "Málaga",
       period: "2022 – 2024",
       topics: "Desarrollo cliente/servidor, JavaScript moderno, PHP, Laravel, SQL, seguridad web, APIs y despliegue en entornos de producción.",
@@ -388,6 +396,7 @@ export const portfolioData: PortfolioData = {
       id: "smr",
       degree: "Técnico en Sistemas Microinformáticos y Redes (SMR)",
       institution: "I.E.S. Gerald Brenan",
+      institutionImage: "/gerald-brenan.jpg",
       location: "Málaga",
       period: "2020 – 2022",
       topics: "Montaje y mantenimiento de hardware, redes locales cableadas e inalámbricas, protocolos TCP/IP, servidores Windows Server y Linux.",
@@ -403,6 +412,7 @@ export const portfolioData: PortfolioData = {
     author: "Luis Miguel Díez Acedo",
     role: "Director General",
     company: "LD Quantum",
+    companyLogo: "/ldquantum.png",
     badge: "Supervisión directa en LD Quantum",
     avatar: "/luius.jfif",
     text: "Mario demostró una gran capacidad técnica, especialmente en el ámbito del desarrollo Frontend y la Inteligencia Artificial, participando activamente en la evolución de nuestros proyectos y aportando soluciones eficaces a los retos del día a día. Además de sus conocimientos, destacaría su actitud proactiva, su capacidad de aprendizaje y su facilidad para integrarse y colaborar con el equipo. Siempre mostró un alto nivel de compromiso y una clara orientación a la calidad en su trabajo."

@@ -118,6 +118,11 @@ export const About: React.FC = () => {
                   {testimonial.role} · <strong className="gradient-purple-text">{testimonial.company}</strong>
                 </div>
               </div>
+              {testimonial.companyLogo && (
+                <div className="testimonial-company-logo-box" title={testimonial.company}>
+                  <img src={testimonial.companyLogo} alt={testimonial.company} className="testimonial-company-logo-img" />
+                </div>
+              )}
               <a
                 href={personal.linkedin}
                 target="_blank"

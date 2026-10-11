@@ -65,15 +65,27 @@ export const Experience: React.FC = () => {
                 <div className="card-top-accent"></div>
 
                 <div className="exp-card-header">
-                  <div className="exp-role-company">
-                    <h3 className="exp-role">{item.role}</h3>
-                    <div className="exp-company-group">
-                      <span className="exp-company gradient-purple-text">{item.company}</span>
-                      <span className="exp-sep">·</span>
-                      <span className="exp-location">
-                        <MapPin size={13} />
-                        <span>{item.location}</span>
-                      </span>
+                  <div className="exp-role-with-logo">
+                    {item.companyLogo && (
+                      <div className="exp-company-logo-box">
+                        <img 
+                          src={item.companyLogo} 
+                          alt={item.company} 
+                          className="exp-company-logo-img" 
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
+                    <div className="exp-role-company">
+                      <h3 className="exp-role">{item.role}</h3>
+                      <div className="exp-company-group">
+                        <span className="exp-company gradient-purple-text">{item.company}</span>
+                        <span className="exp-sep">·</span>
+                        <span className="exp-location">
+                          <MapPin size={13} />
+                          <span>{item.location}</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
 

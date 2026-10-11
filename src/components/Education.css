@@ -21,6 +21,58 @@
   border-color: var(--border-green);
 }
 
+/* Campus Photo Header */
+.edu-campus-image-box {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.15rem;
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+}
+
+.edu-campus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.education-card:hover .edu-campus-img {
+  transform: scale(1.05);
+}
+
+.edu-campus-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(9, 13, 22, 0.65) 0%, rgba(9, 13, 22, 0.15) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .edu-campus-overlay {
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.1) 60%, transparent 100%);
+}
+
+.edu-campus-badge {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .edu-badge-42 {
   display: inline-flex;
   align-items: center;
