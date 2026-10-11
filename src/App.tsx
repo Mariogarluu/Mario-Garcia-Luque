@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { NebulaBackground } from './components/NebulaBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -14,6 +15,7 @@ import { Footer } from './components/Footer';
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <NebulaBackground />
       <div className="portfolio-app">
         <Navbar />
         <main>
