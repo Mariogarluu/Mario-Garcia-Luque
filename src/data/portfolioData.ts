@@ -4,6 +4,20 @@ export interface ProjectRepository {
   badge: string;
 }
 
+export interface ProjectCollaborator {
+  name: string;
+  github: string;
+  githubUrl: string;
+  role: string;
+}
+
+export interface ProjectExpoAccess {
+  title: string;
+  message: string;
+  url: string;
+  linkText: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -11,12 +25,14 @@ export interface Project {
   contextType: 'dam' | '42malaga' | 'personal' | 'laboral';
   contextLabel: string;
   roleInProject: string;
+  collaborators?: ProjectCollaborator[];
   category: 'dam' | 'bot' | 'all';
   description: string;
   technologies: string[];
   demoUrl?: string;
   githubUrl?: string;
   repositories?: ProjectRepository[];
+  expoAccess?: ProjectExpoAccess;
   credentialsDemo?: {
     user: string;
     pass: string;
@@ -429,15 +445,30 @@ export const portfolioData: PortfolioData = {
       contextType: "dam",
       contextLabel: "Proyecto Intermodular 2º DAM (CPIFP Alan Turing)",
       roleInProject: "Tech Lead · Backend & Security Architect",
+      collaborators: [
+        {
+          name: "Salvador Bueno González",
+          github: "sbuegonz00",
+          githubUrl: "https://github.com/sbuegonz00",
+          role: "Frontend UI/UX Designer & Developer"
+        },
+        {
+          name: "Samuel García Ruiz",
+          github: "sgarrui1201",
+          githubUrl: "https://github.com/sgarrui1201",
+          role: "Jira Master & Full-Stack Developer"
+        }
+      ],
       category: "dam",
       image: "/projects/meta-force.png",
       statusType: "active",
       demoUrl: "https://meta-force-psi.vercel.app/",
       githubUrl: "https://github.com/Mariogarluu/Meta_Force_Expo",
-      credentialsDemo: {
-        user: "metaforcegym@gmail.com",
-        pass: "KirkTime67",
-        note: "Acceso evaluación de tribunal (Superadmin)"
+      expoAccess: {
+        title: "Acceso y Datos de Evaluación",
+        message: "Si deseas acceder y probar la plataforma con los diferentes roles (Superadmin, Administrador de Centro, Entrenador y Socio), las credenciales de acceso y las instrucciones completas de prueba están detalladas en la documentación de la Expo.",
+        url: "https://github.com/Mariogarluu/Meta_Force_Expo",
+        linkText: "Consultar datos de acceso en la Expo"
       },
       repositories: [
         { label: "Guía & Docs Expo", url: "https://github.com/Mariogarluu/Meta_Force_Expo", badge: "Repo Central" },
@@ -445,7 +476,7 @@ export const portfolioData: PortfolioData = {
         { label: "Frontend Web", url: "https://github.com/Mariogarluu/Meta_Force_front", badge: "Angular 19" },
         { label: "App Android", url: "https://github.com/Mariogarluu/Meta_Force_kotlin", badge: "Kotlin 2.0" }
       ],
-      description: "Plataforma integral para centros deportivos desarrollada como proyecto intermodular de 2º DAM. Diseñé y lideré la arquitectura backend en Supabase con 34 tablas PostgreSQL, 100% de políticas Row Level Security (RLS), 17 Edge Functions serverless en Deno, sistema de control de accesos físicos por código QR firmado con JWT de caducidad corta, pasarela de suscripciones con generación de facturas PDF (Resend) y conexión segura con la app nativa Android en Kotlin.",
+      description: "Plataforma integral para centros deportivos desarrollada como proyecto intermodular de 2º DAM junto a Salvador Bueno González (@sbuegonz00) y Samuel García Ruiz (@sgarrui1201). Diseñé y lideré la arquitectura backend en Supabase con 34 tablas PostgreSQL, 100% de políticas Row Level Security (RLS), 17 Edge Functions serverless en Deno, sistema de control de accesos físicos por código QR firmado con JWT de caducidad corta, pasarela de suscripciones con generación de facturas PDF (Resend) y conexión segura con la app nativa Android en Kotlin.",
       technologies: [
         "Supabase",
         "PostgreSQL (34 tablas)",

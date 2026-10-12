@@ -12,7 +12,8 @@ import {
   Check,
   Radio,
   Sparkles,
-  Layers
+  Layers,
+  Users
 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { TechIcon } from './TechIcons';
@@ -174,7 +175,72 @@ export const Projects: React.FC = () => {
 
                   <p className="project-description">{project.description}</p>
 
-                  {/* Demo Credentials Box (for Meta Force evaluators) */}
+                  {/* Project Team & Collaborators Section */}
+                  {project.collaborators && project.collaborators.length > 0 && (
+                    <div className="project-collaborators-box">
+                      <div className="collab-header">
+                        <Users size={14} className="collab-icon" />
+                        <span className="collab-title">Equipo & Colaboradores:</span>
+                      </div>
+                      <div className="collab-cards-list">
+                        <div className="collab-member-item is-leader">
+                          <span className="collab-role-tag">Tech Lead & Backend</span>
+                          <a
+                            href="https://github.com/Mariogarluu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="collab-profile-link"
+                          >
+                            <span className="collab-name">Mario García Luque</span>
+                            <span className="collab-handle font-mono">@Mariogarluu</span>
+                            <ExternalLink size={12} className="collab-ext-icon" />
+                          </a>
+                        </div>
+                        {project.collaborators.map((collab, cIdx) => (
+                          <div key={cIdx} className="collab-member-item">
+                            <span className="collab-role-tag">{collab.role}</span>
+                            <a
+                              href={collab.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="collab-profile-link"
+                            >
+                              <span className="collab-name">{collab.name}</span>
+                              <span className="collab-handle font-mono">@{collab.github}</span>
+                              <ExternalLink size={12} className="collab-ext-icon" />
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Expo Access Notice (Credentials and evaluation guide in Expo repo) */}
+                  {project.expoAccess && (
+                    <div className="project-expo-access-box">
+                      <div className="expo-access-header">
+                        <div className="expo-access-title">
+                          <KeyRound size={15} className="expo-access-icon" />
+                          <span>Acceso a la Demo & Credenciales de Prueba:</span>
+                        </div>
+                        <a
+                          href={project.expoAccess.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-expo-docs-link"
+                        >
+                          <GithubIcon size={13} />
+                          <span>{project.expoAccess.linkText}</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </div>
+                      <p className="expo-access-text">
+                        {project.expoAccess.message}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Demo Credentials Box (Fallback if present) */}
                   {project.credentialsDemo && (
                     <div className="project-creds-container">
                       <div className="creds-header">
