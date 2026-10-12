@@ -136,3 +136,15 @@
 .service-cta {
   width: 100%;
 }
+
+/* Responsive adjustments for Services */
+@media (max-width: 640px) {
+  .service-card {
+    padding: 1.45rem 1.15rem;
+  }
+
+  .service-title {
+    font-size: 1.05rem;
+  }
+}
+

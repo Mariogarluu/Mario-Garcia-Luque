@@ -168,7 +168,13 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -178,7 +184,7 @@ img {
 }
 
 .section-wrapper {
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   position: relative;
 }
 
@@ -191,7 +197,13 @@ img {
 .section-header {
   text-align: center;
   max-width: 740px;
-  margin: 0 auto 3.5rem auto;
+  margin: 0 auto 2.25rem auto;
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
 }
 
 .section-pill {
@@ -215,12 +227,18 @@ img {
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 1.85rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 0.85rem;
   line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -230,9 +248,15 @@ img {
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .section-subtitle {
+    font-size: 1.05rem;
+  }
 }
 
 /* ==========================================================================

@@ -235,3 +235,17 @@
   from { transform: translateX(100%); }
   to { transform: translateX(0); }
 }
+
+@media (max-width: 420px) {
+  .logo-text {
+    font-size: 1.05rem;
+  }
+  .logo-badge {
+    width: 34px;
+    height: 34px;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
+}
+

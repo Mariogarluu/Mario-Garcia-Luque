@@ -301,3 +301,27 @@
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+/* Responsive adjustments for Education */
+@media (max-width: 640px) {
+  .education-card {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .edu-degree {
+    font-size: 1.05rem;
+  }
+
+  .edu-campus-image-box {
+    height: 110px;
+  }
+
+  .edu-linked-project {
+    padding: 0.85rem 0.95rem;
+  }
+
+  .certifications-bar {
+    padding: 1.15rem 1rem;
+  }
+}
+

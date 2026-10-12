@@ -289,3 +289,49 @@
   color: var(--text-secondary);
   line-height: 1.55;
 }
+
+/* Responsive adjustments for Experience */
+@media (max-width: 640px) {
+  .experience-card {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .exp-card-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .exp-role-with-logo {
+    gap: 0.75rem;
+  }
+
+  .exp-company-logo-box {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .exp-role {
+    font-size: 1.1rem;
+  }
+
+  .exp-company-group {
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+  }
+
+  .complementary-card {
+    padding: 1.15rem 1rem;
+  }
+
+  .comp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .comp-period {
+    margin-left: 0;
+  }
+}
+

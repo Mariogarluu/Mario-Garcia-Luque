@@ -8,7 +8,7 @@ export interface ProjectCollaborator {
   name: string;
   github: string;
   githubUrl: string;
-  role: string;
+  role?: string;
 }
 
 export interface ProjectExpoAccess {
@@ -444,19 +444,17 @@ export const portfolioData: PortfolioData = {
       subtitle: "Ecosistema Multiplataforma (Web Angular 19, Android Kotlin & Backend Supabase)",
       contextType: "dam",
       contextLabel: "Proyecto Intermodular 2º DAM (CPIFP Alan Turing)",
-      roleInProject: "Tech Lead · Backend & Security Architect",
+      roleInProject: "Desarrollo Full Stack en Equipo",
       collaborators: [
         {
           name: "Salvador Bueno González",
           github: "sbuegonz00",
-          githubUrl: "https://github.com/sbuegonz00",
-          role: "Frontend UI/UX Designer & Developer"
+          githubUrl: "https://github.com/sbuegonz00"
         },
         {
           name: "Samuel García Ruiz",
           github: "sgarrui1201",
-          githubUrl: "https://github.com/sgarrui1201",
-          role: "Jira Master & Full-Stack Developer"
+          githubUrl: "https://github.com/sgarrui1201"
         }
       ],
       category: "dam",
@@ -476,7 +474,7 @@ export const portfolioData: PortfolioData = {
         { label: "Frontend Web", url: "https://github.com/Mariogarluu/Meta_Force_front", badge: "Angular 19" },
         { label: "App Android", url: "https://github.com/Mariogarluu/Meta_Force_kotlin", badge: "Kotlin 2.0" }
       ],
-      description: "Plataforma integral para centros deportivos desarrollada como proyecto intermodular de 2º DAM junto a Salvador Bueno González (@sbuegonz00) y Samuel García Ruiz (@sgarrui1201). Diseñé y lideré la arquitectura backend en Supabase con 34 tablas PostgreSQL, 100% de políticas Row Level Security (RLS), 17 Edge Functions serverless en Deno, sistema de control de accesos físicos por código QR firmado con JWT de caducidad corta, pasarela de suscripciones con generación de facturas PDF (Resend) y conexión segura con la app nativa Android en Kotlin.",
+      description: "Plataforma integral para centros deportivos desarrollada como proyecto intermodular de 2º DAM en equipo junto a Salvador Bueno González (@sbuegonz00) y Samuel García Ruiz (@sgarrui1201), trabajando de forma conjunta y repartida en todas las capas del producto. Arquitectura backend en Supabase con 34 tablas PostgreSQL, 100% de políticas Row Level Security (RLS), 17 Edge Functions serverless en Deno, sistema de control de accesos físicos por código QR firmado con JWT de caducidad corta, pasarela de suscripciones con facturas PDF (Resend) y conexión segura con la app nativa Android en Kotlin.",
       technologies: [
         "Supabase",
         "PostgreSQL (34 tablas)",

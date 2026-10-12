@@ -396,3 +396,40 @@
   to { transform: rotate(360deg); }
 }
 
+/* Responsive adjustments for Contact */
+@media (max-width: 640px) {
+  .contact-channel-card {
+    padding: 1rem 0.95rem;
+    gap: 0.85rem;
+  }
+
+  .channel-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .channel-value {
+    font-size: 0.875rem;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on mobile Safari */
+  }
+
+  .success-actions-grid {
+    width: 100%;
+  }
+
+  .success-action-btn {
+    font-size: 0.84rem;
+    padding: 0.65rem 0.85rem;
+  }
+}
+
+

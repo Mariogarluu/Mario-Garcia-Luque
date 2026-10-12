@@ -333,3 +333,26 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+/* Responsive adjustments for About */
+@media (max-width: 640px) {
+  .about-story,
+  .testimonial-card {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .testimonial-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .testimonial-author-wrapper {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .soft-skill-card {
+    padding: 1.25rem 1.1rem;
+  }
+}
+

@@ -180,17 +180,17 @@ export const Projects: React.FC = () => {
                     <div className="project-collaborators-box">
                       <div className="collab-header">
                         <Users size={14} className="collab-icon" />
-                        <span className="collab-title">Equipo & Colaboradores:</span>
+                        <span className="collab-title">Equipo de Desarrollo del Proyecto:</span>
                       </div>
                       <div className="collab-cards-list">
-                        <div className="collab-member-item is-leader">
-                          <span className="collab-role-tag">Tech Lead & Backend</span>
+                        <div className="collab-member-item">
                           <a
                             href="https://github.com/Mariogarluu"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="collab-profile-link"
                           >
+                            <GithubIcon size={15} className="collab-gh-icon" />
                             <span className="collab-name">Mario García Luque</span>
                             <span className="collab-handle font-mono">@Mariogarluu</span>
                             <ExternalLink size={12} className="collab-ext-icon" />
@@ -198,13 +198,13 @@ export const Projects: React.FC = () => {
                         </div>
                         {project.collaborators.map((collab, cIdx) => (
                           <div key={cIdx} className="collab-member-item">
-                            <span className="collab-role-tag">{collab.role}</span>
                             <a
                               href={collab.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="collab-profile-link"
                             >
+                              <GithubIcon size={15} className="collab-gh-icon" />
                               <span className="collab-name">{collab.name}</span>
                               <span className="collab-handle font-mono">@{collab.github}</span>
                               <ExternalLink size={12} className="collab-ext-icon" />
