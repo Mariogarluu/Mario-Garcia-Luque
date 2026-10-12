@@ -61,11 +61,12 @@ export const Footer: React.FC = () => {
           <div className="footer-links-col">
             <h4 className="footer-col-title">Secciones</h4>
             <div className="footer-links-list">
-              <a href="#sobre-mi">Sobre Mí</a>
               <a href="#habilidades">Habilidades</a>
               <a href="#experiencia">Experiencia</a>
               <a href="#proyectos">Proyectos</a>
               <a href="#formacion">Formación</a>
+              <a href="#servicios">Servicios</a>
+              <a href="#sobre-mi">Sobre Mí</a>
               <a href="#contacto">Contacto</a>
             </div>
           </div>

@@ -17,12 +17,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Proyectos', href: '#proyectos' },
-    { label: 'Sobre Mí', href: '#sobre-mi' },
-    { label: 'Experiencia', href: '#experiencia' },
     { label: 'Habilidades', href: '#habilidades' },
+    { label: 'Experiencia', href: '#experiencia' },
+    { label: 'Proyectos', href: '#proyectos' },
     { label: 'Formación', href: '#formacion' },
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Sobre Mí', href: '#sobre-mi' },
     { label: 'Contacto', href: '#contacto' },
   ];
 
