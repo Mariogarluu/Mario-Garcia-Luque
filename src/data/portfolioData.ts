@@ -276,7 +276,8 @@ export const portfolioData: PortfolioData = {
       category: "IDEs con IA & Ecosistema Agéntico",
       icon: "bot",
       items: [
-        { name: "Google Antigravity & Cursor (AI IDEs)", level: "Avanzado" },
+        { name: "Google Antigravity (AI IDE)", level: "Avanzado" },
+        { name: "Cursor AI (IDE con IA)", level: "Avanzado" },
         { name: "Configuración de Rules (.cursorrules, AGENTS.md)", level: "Avanzado" },
         { name: "Model Context Protocol (MCP) & Servidores MCP", level: "Avanzado" },
         { name: "Skills & Flujos de Agentes Autónomos", level: "Avanzado" },

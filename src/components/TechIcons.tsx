@@ -320,8 +320,54 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, size = 18, className =
     );
   }
 
-  // 26. AI / OpenAI / LLMs
-  if (norm.includes('ia') || norm.includes('llm') || norm.includes('ai') || norm.includes('inteligencia')) {
+  // 26. Google Antigravity (Official Brand Logo)
+  if (norm.includes('antigravity')) {
+    return wrap(
+      <img
+        src="/antigravity.png"
+        alt="Google Antigravity"
+        width={size}
+        height={size}
+        style={{
+          width: size,
+          height: size,
+          objectFit: 'contain',
+          borderRadius: Math.max(3, Math.round(size * 0.18)),
+          display: 'block'
+        }}
+      />,
+      'Google Antigravity'
+    );
+  }
+
+  // 27. Cursor AI IDE
+  if (norm.includes('cursor')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        <path d="M12 2.5L3.5 7.4v9.2L12 21.5l8.5-4.9V7.4L12 2.5z" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M12 21.5V11.8M12 11.8L3.5 7.4M12 11.8l8.5-4.4" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="12" cy="11.8" r="2.2" fill="#38BDF8" />
+      </svg>,
+      'Cursor AI IDE'
+    );
+  }
+
+  // 28. AI / OpenAI / LLMs
+  const isGenericAI =
+    norm.includes('llm') ||
+    norm.includes('openai') ||
+    norm.includes('inteligencia') ||
+    norm.includes('apis de ia') ||
+    norm === 'ia' ||
+    norm === 'ai' ||
+    norm.startsWith('ia ') ||
+    norm.endsWith(' ia') ||
+    norm.includes(' ia ') ||
+    norm.startsWith('ai ') ||
+    norm.endsWith(' ai') ||
+    norm.includes(' ai ');
+
+  if (isGenericAI) {
     return wrap(
       <svg width={size} height={size} viewBox="0 0 128 128" fill="none">
         <rect width="128" height="128" rx="24" fill="#10A37F" />
@@ -513,36 +559,7 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, size = 18, className =
     );
   }
 
-  // 43. Cursor AI IDE
-  if (norm.includes('cursor')) {
-    return wrap(
-      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-        <path d="M12 2.5L3.5 7.4v9.2L12 21.5l8.5-4.9V7.4L12 2.5z" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M12 21.5V11.8M12 11.8L3.5 7.4M12 11.8l8.5-4.4" stroke="#38BDF8" strokeWidth="2" strokeLinejoin="round" />
-        <circle cx="12" cy="11.8" r="2.2" fill="#38BDF8" />
-      </svg>,
-      'Cursor AI IDE'
-    );
-  }
 
-  // 44. Google Antigravity
-  if (norm.includes('antigravity')) {
-    return wrap(
-      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-        <defs>
-          <linearGradient id="antigrav-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#818CF8" />
-            <stop offset="0.5" stopColor="#C084FC" />
-            <stop offset="1" stopColor="#38BDF8" />
-          </linearGradient>
-        </defs>
-        <path d="M12 2C12 7.52 7.52 12 2 12C7.52 12 12 16.48 12 22C12 16.48 16.48 12 22 12C16.48 12 12 7.52 12 2Z" fill="url(#antigrav-grad)" />
-        <circle cx="18" cy="6" r="2" fill="#38BDF8" />
-        <circle cx="6" cy="18" r="1.5" fill="#C084FC" />
-      </svg>,
-      'Google Antigravity'
-    );
-  }
 
   // 45. Model Context Protocol (MCP)
   if (norm.includes('mcp') || norm.includes('model context')) {
