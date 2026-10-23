@@ -104,6 +104,7 @@ export interface PortfolioData {
     workPreference: string;
     driverLicense: string;
     photo: string;
+    banner?: string;
     languages: { name: string; level: string }[];
   };
   about: {
@@ -150,7 +151,8 @@ export const portfolioData: PortfolioData = {
     availability: "Disponible · Empleo & Proyectos Freelance",
     workPreference: "Málaga (Presencial / Híbrido) o 100% Remoto",
     driverLicense: "Permiso B y vehículo propio",
-    photo: "/mario3.png",
+    photo: "/mario.jpg",
+    banner: "/banner.png",
     languages: [
       { name: "Español", level: "Nativo" },
       { name: "Inglés", level: "B1 / Professional Working" }

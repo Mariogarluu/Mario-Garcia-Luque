@@ -123,6 +123,21 @@ export const Contact: React.FC = () => {
           </p>
         </div>
 
+        {/* Developer Brand Banner */}
+        {personal.banner && (
+          <div className="contact-banner-wrapper">
+            <div className="glass-card contact-brand-banner">
+              <div className="card-top-accent"></div>
+              <img
+                src={personal.banner}
+                alt={`${personal.name} - Desarrollador de Software`}
+                className="contact-brand-banner-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Contact Layout */}
         <div className="contact-grid">
           {/* Left Column: Direct Info Cards */}

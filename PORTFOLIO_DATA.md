@@ -206,6 +206,8 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
     "linkedin": "https://www.linkedin.com/in/mario-garcia-luque",
     "github": "https://github.com/Mariogarluu",
     "discord": "mariogarlu",
+    "photo": "/mario.jpg",
+    "banner": "/banner.png",
     "availability": "Available / Immediate",
     "workPreference": "Málaga (Presencial/Híbrido) o Remoto (100%)",
     "driverLicense": "B",

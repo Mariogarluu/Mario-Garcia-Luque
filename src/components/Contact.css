@@ -1,3 +1,32 @@
+/* Developer Brand Banner */
+.contact-banner-wrapper {
+  max-width: 1080px;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-brand-banner {
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 10px 30px var(--purple-glow);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.contact-brand-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 45px var(--purple-glow);
+}
+
+.contact-brand-banner-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  display: block;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
