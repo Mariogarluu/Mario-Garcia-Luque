@@ -12,7 +12,7 @@ import {
   ExternalLink,
   Loader2
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
 import './Contact.css';
 
 // Custom WhatsApp SVG for recognizable branding
@@ -27,6 +27,7 @@ export const Contact: React.FC = () => {
 
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedDiscord, setCopiedDiscord] = useState(false);
   const [copiedMessage, setCopiedMessage] = useState(false);
 
   // Form State
@@ -52,6 +53,12 @@ export const Contact: React.FC = () => {
     navigator.clipboard.writeText(personal.phone);
     setCopiedPhone(true);
     setTimeout(() => setCopiedPhone(false), 2200);
+  };
+
+  const handleCopyDiscord = () => {
+    navigator.clipboard.writeText(personal.discord);
+    setCopiedDiscord(true);
+    setTimeout(() => setCopiedDiscord(false), 2200);
   };
 
   const handleCopyFullMessage = () => {
@@ -193,6 +200,36 @@ export const Contact: React.FC = () => {
               </button>
             </div>
 
+            {/* Discord Card */}
+            <div className="glass-card contact-channel-card contact-channel-discord">
+              <div className="channel-icon-box channel-icon-discord">
+                <DiscordIcon size={22} className="channel-icon-discord-glyph" />
+              </div>
+              <div className="channel-content">
+                <div className="channel-label-row">
+                  <span className="channel-label">Discord</span>
+                  <span className="channel-badge-chip-discord">Chat & Comunidad</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCopyDiscord}
+                  className="channel-value channel-value-discord"
+                  title="Copiar usuario de Discord: mariogarlu"
+                >
+                  @{personal.discord}
+                </button>
+              </div>
+              <button 
+                type="button"
+                onClick={handleCopyDiscord}
+                className="channel-action-btn channel-action-discord"
+                title="Copiar usuario de Discord: mariogarlu"
+                aria-label="Copiar usuario de Discord"
+              >
+                {copiedDiscord ? <Check size={16} className="text-green" /> : <Copy size={16} />}
+              </button>
+            </div>
+
             {/* Location Card */}
             <div className="glass-card contact-channel-card">
               <div className="channel-icon-box">
@@ -211,7 +248,7 @@ export const Contact: React.FC = () => {
 
             {/* Social Network Links */}
             <div className="glass-card contact-socials-card">
-              <h4 className="socials-card-title">Perfiles Profesionales:</h4>
+              <h4 className="socials-card-title">Perfiles Profesionales & Redes:</h4>
               <div className="socials-buttons-group">
                 <a
                   href={personal.linkedin}
@@ -231,6 +268,18 @@ export const Contact: React.FC = () => {
                   <GithubIcon size={18} />
                   <span>GitHub (@Mariogarluu)</span>
                 </a>
+                <button
+                  type="button"
+                  onClick={handleCopyDiscord}
+                  className="btn btn-secondary social-link-card-btn social-link-discord-btn"
+                  title="Copiar usuario de Discord: mariogarlu"
+                >
+                  <DiscordIcon size={18} className="social-discord-icon" />
+                  <span>Discord (@{personal.discord})</span>
+                  <span className="btn-discord-copy-tag font-mono">
+                    {copiedDiscord ? '¡Copiado!' : 'Copiar'}
+                  </span>
+                </button>
               </div>
             </div>
           </div>

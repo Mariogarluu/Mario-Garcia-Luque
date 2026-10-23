@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Terminal, ArrowUp, Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { Terminal, ArrowUp, Mail, Check } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
   const { personal } = portfolioData;
+  const [copiedDiscord, setCopiedDiscord] = useState(false);
+
+  const handleCopyDiscord = () => {
+    navigator.clipboard.writeText(personal.discord);
+    setCopiedDiscord(true);
+    setTimeout(() => setCopiedDiscord(false), 2200);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -47,6 +54,15 @@ export const Footer: React.FC = () => {
               >
                 <LinkedinIcon size={17} />
               </a>
+              <button
+                type="button"
+                onClick={handleCopyDiscord}
+                className="social-icon-btn btn-social-reset"
+                aria-label="Discord (mariogarlu)"
+                title={copiedDiscord ? '¡Discord copiado: @mariogarlu!' : 'Copiar Discord: @mariogarlu'}
+              >
+                {copiedDiscord ? <Check size={17} className="text-green" /> : <DiscordIcon size={17} />}
+              </button>
               <a
                 href={`mailto:${personal.email}`}
                 className="social-icon-btn"

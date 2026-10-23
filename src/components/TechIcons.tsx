@@ -68,6 +68,45 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, size = 18, className =
     );
   }
 
+  // 4b. Angular (Angular 19 / Standalone)
+  if (norm.includes('angular')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 250 250" fill="none">
+        <polygon points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 203.9,186.3 218.1,63.2" fill="#DD0031" />
+        <polygon points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 203.9,186.3 218.1,63.2" fill="#C3002F" />
+        <path d="M125,52.1L66.8,182.6h21.7l11.7-29.2h49.4l11.7,29.2h21.7L125,52.1z M142.1,135.4H107.9l17.1-41.2L142.1,135.4z" fill="#FFFFFF" />
+      </svg>,
+      'Angular 19'
+    );
+  }
+
+  // 4c. RxJS / Signals / Reactive Programming
+  if (norm.includes('rxjs') || norm.includes('reactive') || norm.includes('signals')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" fill="#B7178C" />
+        <path d="M16.5 12a4.5 4.5 0 0 0-4.5-4.5M12 7.5A4.5 4.5 0 0 0 7.5 12M7.5 12a4.5 4.5 0 0 0 4.5 4.5M12 16.5a4.5 4.5 0 0 0 4.5-4.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="2" fill="#FFFFFF" />
+      </svg>,
+      'RxJS'
+    );
+  }
+
+  // 4d. League of Legends / Esports / Cargo API / Fearless Draft
+  if (norm.includes('leaguepedia') || norm.includes('cargo') || norm.includes('esports') || norm.includes('draft') || norm.includes('lol')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" stroke="#C89B3C" />
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" stroke="#C89B3C" />
+        <path d="M4 22h16" stroke="#C89B3C" />
+        <path d="M10 14.66V17c0 .55-.45 1-1 1H7" stroke="#0AC8B9" />
+        <path d="M14 14.66V17c0 .55.45 1 1 1h2" stroke="#0AC8B9" />
+        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" fill="#C89B3C" fillOpacity="0.2" stroke="#C89B3C" />
+      </svg>,
+      'LoL Esports & Draft Engine'
+    );
+  }
+
   // 5. Supabase
   if (norm.includes('supabase')) {
     return wrap(

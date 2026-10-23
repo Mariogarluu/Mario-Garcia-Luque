@@ -14,6 +14,7 @@
 - **Teléfono:** [+34 611 489 434](tel:+34611489434)
 - **LinkedIn:** [https://www.linkedin.com/in/mario-garcia-luque](https://www.linkedin.com/in/mario-garcia-luque)
 - **GitHub:** [https://github.com/Mariogarluu](https://github.com/Mariogarluu)
+- **Discord:** mariogarlu (@mariogarlu)
 - **Disponibilidad:** En búsqueda activa / Inmediata
 - **Modalidad:** Presencial o híbrido en Málaga y alrededores (Carnet de conducir B) | 100% Remoto (cualquier ubicación)
 - **Idiomas:**
@@ -124,19 +125,31 @@
 
 ## 6. Proyectos Destacados (Featured Projects)
 
-> **Nota:** Sección pendiente de añadir tus proyectos reales. Cuando quieras, repasamos la lista de tus repositorios o proyectos que quieras destacar y los incorporamos aquí con sus enlaces y descripciones reales.
+### 1. Meta Force — Plataforma Deportiva Integral
+- **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Multiplataforma
+- **Categoría:** Full Stack / Mobile / BaaS
+- **Tecnologías:** `Angular 19` `Kotlin (Android)` `Supabase` `PostgreSQL` `Deno Edge Functions` `Inteligencia Artificial`
+- **Enlace demo / producción:** [https://meta-force-psi.vercel.app/](https://meta-force-psi.vercel.app/)
+- **Enlace código / GitHub:** [https://github.com/Mariogarluu/Meta_Force_Expo](https://github.com/Mariogarluu/Meta_Force_Expo)
+- **Descripción:** Ecosistema completo para gestión y seguimiento deportivo multiplataforma, combinando una interfaz web moderna en Angular 19 con una aplicación nativa en Kotlin para dispositivos Android.
+- **Puntos clave / Logros:**
+  - Arquitectura backend serverless completa sobre Supabase con 34 tablas relacionales en PostgreSQL (políticas RLS avanzadas, constraints y triggers).
+  - Desarrollo de 17 Deno Edge Functions para procesamiento de datos, webhooks y lógica de negocio distribuida.
+  - Asistente inteligente integrado con IA para personalización de rutinas, seguimiento de objetivos y análisis de rendimiento deportivo.
+  - Sincronización en tiempo real entre cliente web y app móvil nativa.
 
-### Plantilla para añadir cada proyecto:
-<!--
-- **Nombre del proyecto:** 
-- **Subtítulo / Rol:** 
-- **Categoría:** (Full Stack / Frontend / Backend / etc.)
-- **Tecnologías:** `React` `Node.js` ...
-- **Enlace demo / producción:** 
-- **Enlace código / GitHub:** 
-- **Descripción:** 
-- **Puntos clave / Logros:** 
--->
+### 2. LoL Fantasy & Esports Hub (Temporada 2026)
+- **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Motor Táctico
+- **Categoría:** Full Stack / Web Gaming / Algoritmia
+- **Tecnologías:** `Angular 19` `TypeScript 5.7` `Supabase` `PostgreSQL` `Tailwind CSS` `Fearless Draft`
+- **Enlace demo / producción:** [https://lol-fantasy-web.vercel.app/](https://lol-fantasy-web.vercel.app/)
+- **Enlace código / GitHub:** [https://github.com/Mariogarluu/Lol-Fantasy](https://github.com/Mariogarluu/Lol-Fantasy)
+- **Descripción:** Simulador interactivo y plataforma competitiva inspirada en el ecosistema profesional de League of Legends Esports. Incluye Modo Carrera de General Manager, minijuego Pro-dle y motor de simulación táctica client-side minuto a minuto.
+- **Puntos clave / Logros:**
+  - **Modo Carrera GM 2026:** Gestión de clubes en LCK, LEC, LPL y LCS, gestión de presupuestos, masa salarial, química de equipo, tácticas de partida (`early_snowball`, `late_scaling`, etc.) y calendario oficial de 3 Splits (First Stand, MSI y Worlds).
+  - **Motor Táctico de Simulación v3:** Replay minuto a minuto (minuto 1 al 40+) con KDA, CS, oro, builds completas y disputa de objetivos neutrales (Voidgrubs, dragones elementales, Barón Nashor). Soporte para series BO1/BO3/BO5 con normativa **Fearless Draft**.
+  - **Minijuego Pro-dle:** Desafío de deducción estilo Wordle (Daily y Endless) con comparación dinámica de región, rol, club, media OVR y nacionalidad.
+  - **Base de datos & Sandbox 5v5:** +380 jugadores profesionales con estadísticas detalladas y herramienta de simulación libre con cálculo de química y visualizador en directo.
 
 ---
 
@@ -192,6 +205,7 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
     "phone": "+34 611 489 434",
     "linkedin": "https://www.linkedin.com/in/mario-garcia-luque",
     "github": "https://github.com/Mariogarluu",
+    "discord": "mariogarlu",
     "availability": "Available / Immediate",
     "workPreference": "Málaga (Presencial/Híbrido) o Remoto (100%)",
     "driverLicense": "B",
@@ -277,3 +291,28 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
   }
 }
 ```
+
+---
+
+## 11. Paleta de Colores y Guía de Marca Oficial (Brand Identity — Obsidian & Emerald Violet)
+
+Paleta cromática oficial de la marca personal de **Mario García Luque**, sincronizada con el sitio web de portafolio y los currículums:
+
+| Color / Token | Hexadecimal | RGB | Rol / Aplicación |
+| :--- | :--- | :--- | :--- |
+| **Obsidian Deep Navy** | `#090D16` | `rgb(9, 13, 22)` | Fondo primario, cabecera del CV, fondo base oscuro |
+| **Deep Slate Surface** | `#121A2E` | `rgb(18, 26, 46)` | Fondo secundario, barra lateral del CV, tarjetas |
+| **Navy Track / Border** | `#1C2642` | `rgb(28, 38, 66)` | Pistas de barras de habilidades, bordes sutiles |
+| **Emerald Mint** | `#34D399` | `rgb(52, 211, 153)` | Acento técnico primario, barras de progreso, badges |
+| **Emerald Vibrant** | `#10B981` | `rgb(16, 185, 129)` | Acento de éxito, botones interactivos |
+| **Royal Violet** | `#7C3AED` | `rgb(124, 58, 237)` | Acento dúo, enlaces interactivos, viñetas de sección |
+| **Lilac Violet** | `#A78BFA` | `rgb(167, 139, 250)` | Subtítulos de código, degradados con esmeralda |
+| **Slate Light Track** | `#E2E8F0` | `rgb(226, 232, 240)` | Pistas de idiomas sobre fondo blanco, divisores |
+| **Slate 900 (Texto)** | `#0F172A` | `rgb(15, 23, 42)` | Texto principal sobre fondo claro (alta legibilidad) |
+| **Slate 500 (Muted)** | `#64748B` | `rgb(100, 116, 139)` | Fechas, ubicaciones y metadatos secundarios |
+| **Slate 50 (Blanco)** | `#F8FAFC` | `rgb(248, 250, 252)` | Tipografía sobre fondos oscuros (cabecera y sidebar) |
+
+### Degradados de Marca:
+* **Brand Duo Gradient:** `linear-gradient(135deg, #8B5CF6 0%, #10B981 100%)` (Violeta a Esmeralda)
+* **Glow Subtle:** `rgba(139, 92, 246, 0.35)` y `rgba(16, 185, 129, 0.35)`
+

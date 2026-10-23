@@ -171,6 +171,9 @@
   border: 1px solid var(--border-light);
   color: var(--text-secondary);
   transition: all 0.15s ease;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
 }
 
 .social-icon-btn:hover {

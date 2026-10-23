@@ -26,7 +26,7 @@ export interface Project {
   contextLabel: string;
   roleInProject: string;
   collaborators?: ProjectCollaborator[];
-  category: 'dam' | 'bot' | 'all';
+  category: 'dam' | 'bot' | 'fantasy' | 'all';
   description: string;
   technologies: string[];
   demoUrl?: string;
@@ -99,6 +99,7 @@ export interface PortfolioData {
     phone: string;
     linkedin: string;
     github: string;
+    discord: string;
     availability: string;
     workPreference: string;
     driverLicense: string;
@@ -145,6 +146,7 @@ export const portfolioData: PortfolioData = {
     phone: "+34 611 489 434",
     linkedin: "https://www.linkedin.com/in/mario-garcia-luque",
     github: "https://github.com/Mariogarluu",
+    discord: "mariogarlu",
     availability: "Disponible · Empleo & Proyectos Freelance",
     workPreference: "Málaga (Presencial / Híbrido) o 100% Remoto",
     driverLicense: "Permiso B y vehículo propio",
@@ -227,13 +229,13 @@ export const portfolioData: PortfolioData = {
       icon: "layout",
       items: [
         { name: "React.js", level: "Avanzado" },
+        { name: "Angular (v19 Standalone)", level: "Avanzado" },
         { name: "TypeScript", level: "Avanzado" },
         { name: "JavaScript (ES6+)", level: "Avanzado" },
         { name: "Next.js", level: "Intermedio" },
-        { name: "HTML5 & CSS3 Avanzado", level: "Avanzado" },
         { name: "Tailwind CSS & Vanilla CSS", level: "Avanzado" },
-        { name: "Responsive & Mobile-First", level: "Avanzado" },
-        { name: "Custom Hooks & State Management", level: "Avanzado" }
+        { name: "RxJS & State Management", level: "Avanzado" },
+        { name: "Responsive & Mobile-First", level: "Avanzado" }
       ]
     },
     {
@@ -439,6 +441,42 @@ export const portfolioData: PortfolioData = {
     text: "Mario demostró una gran capacidad técnica, especialmente en el ámbito del desarrollo Frontend y la Inteligencia Artificial, participando activamente en la evolución de nuestros proyectos y aportando soluciones eficaces a los retos del día a día. Además de sus conocimientos, destacaría su actitud proactiva, su capacidad de aprendizaje y su facilidad para integrarse y colaborar con el equipo. Siempre mostró un alto nivel de compromiso y una clara orientación a la calidad en su trabajo."
   },
   projects: [
+    {
+      id: "lol-fantasy",
+      title: "LoL Fantasy · Esports Manager & Pro-dle (Temporada 2026)",
+      subtitle: "Simulador de Gestión Deportiva, Motor Táctico en Tiempo Real y Minijuego Diario",
+      contextType: "personal",
+      contextLabel: "Proyecto Personal · Esports & Simulación",
+      roleInProject: "Desarrollador Full Stack & Arquitectura",
+      category: "fantasy",
+      image: "/projects/lol-fantasy.png",
+      statusType: "active",
+      demoUrl: "https://lol-fantasy-web.vercel.app/",
+      githubUrl: "https://github.com/Mariogarluu/Lol-Fantasy",
+      repositories: [
+        { label: "Repositorio Principal", url: "https://github.com/Mariogarluu/Lol-Fantasy", badge: "Monorepo Angular 19" }
+      ],
+      description: "Plataforma interactiva y simulador de gestión deportiva de League of Legends Esports adaptado a la temporada oficial 2026. Permite asumir el rol de General Manager en el Modo Carrera en solitario para llevar a una franquicia a través de los 3 splits oficiales y clasificarse a torneos internacionales (First Stand, MSI y Worlds). Incorpora un motor de simulación táctico minuto a minuto con soporte para Fearless Draft, eventos de objetivos modernos (Voidgrubs, dragones elementales, Barón, alma de dragón), catálogo de +380 jugadores profesionales sincronizados con Leaguepedia Cargo API, y el minijuego diario 'Pro-dle' con modos Daily y Endless.",
+      technologies: [
+        "Angular 19",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Leaguepedia Cargo API",
+        "Tailwind CSS",
+        "RxJS",
+        "Fearless Draft Engine",
+        "Vercel"
+      ],
+      highlights: [
+        "Modo Carrera Single-Player: Simulación profunda de la temporada oficial 2026 con elección de franquicias en LCK, LEC, LPL y LCS, gestión de presupuestos en monedas reales (₩, €, ¥, $), fichajes y sinergias de plantilla.",
+        "Motor Táctico Minute-by-Minute v3: Algoritmo de simulación que calcula First Blood, disputas de Larvas del Vacío (Voidgrubs), Dragones elementales, Barón Nashor, compras de ítems y Fearless Draft en series BO1, BO3 y BO5.",
+        "Pro-dle (Desafío Diario): Minijuego de deducción de jugadores profesionales estilo Wordle por región, rol, club, media (OVR) y nacionalidad, con modos Daily (sincronizado a medianoche) y Endless para entrenar.",
+        "Pipeline Automatizado de Datos: Scripts en TypeScript para extracción y normalización de +380 jugadores y plantillas oficiales 2026 conectando con la API Cargo de Leaguepedia y Supabase.",
+        "Despliegue activo y optimizado en producción en Vercel (lol-fantasy-web.vercel.app) con arquitectura Angular 19 Standalone y persistencia reactiva."
+      ],
+      featured: true
+    },
     {
       id: "meta-force",
       title: "Meta Force · Plataforma Integral de Centros Deportivos",

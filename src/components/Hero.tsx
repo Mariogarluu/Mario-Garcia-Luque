@@ -11,17 +11,24 @@ import {
   Layers, 
   Sparkles 
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
   const { personal, quickStats } = portfolioData;
   const [copied, setCopied] = useState(false);
+  const [copiedDiscord, setCopiedDiscord] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personal.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);
+  };
+
+  const handleCopyDiscord = () => {
+    navigator.clipboard.writeText(personal.discord);
+    setCopiedDiscord(true);
+    setTimeout(() => setCopiedDiscord(false), 2200);
   };
 
   return (
@@ -117,6 +124,15 @@ export const Hero: React.FC = () => {
               >
                 <LinkedinIcon size={18} />
               </a>
+              <button
+                type="button"
+                onClick={handleCopyDiscord}
+                className="social-icon-btn btn-social-reset"
+                aria-label="Discord de Mario (mariogarlu)"
+                title={copiedDiscord ? '¡Discord copiado: @mariogarlu!' : 'Copiar Discord: @mariogarlu'}
+              >
+                {copiedDiscord ? <Check size={18} className="text-green" /> : <DiscordIcon size={18} />}
+              </button>
               <a
                 href={`mailto:${personal.email}`}
                 className="social-icon-btn"

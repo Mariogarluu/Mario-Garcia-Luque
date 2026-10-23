@@ -311,6 +311,90 @@
   border-color: #25D366 !important;
 }
 
+/* Discord Channel styling */
+.contact-channel-discord {
+  border-color: rgba(88, 101, 242, 0.25);
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.channel-icon-discord {
+  background: rgba(88, 101, 242, 0.12);
+  border-color: rgba(88, 101, 242, 0.3);
+}
+
+.channel-icon-discord-glyph {
+  color: #5865F2;
+}
+
+.channel-badge-chip-discord {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  background: rgba(88, 101, 242, 0.15);
+  color: #5865F2;
+  border: 1px solid rgba(88, 101, 242, 0.3);
+}
+
+.channel-value-discord {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.channel-value-discord:hover {
+  color: #5865F2;
+}
+
+.channel-action-discord:hover {
+  color: #5865F2 !important;
+  border-color: #5865F2 !important;
+}
+
+.social-link-discord-btn {
+  cursor: pointer;
+  width: 100%;
+}
+
+.social-link-discord-btn:hover {
+  border-color: rgba(88, 101, 242, 0.5);
+}
+
+.social-discord-icon {
+  color: #5865F2;
+}
+
+.btn-discord-copy-tag {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(88, 101, 242, 0.12);
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  color: #5865F2;
+  transition: all 0.2s ease;
+}
+
+[data-theme="light"] .channel-value-discord:hover {
+  color: #4752c4;
+}
+
+[data-theme="light"] .btn-discord-copy-tag {
+  color: #4752c4;
+  border-color: rgba(71, 82, 196, 0.3);
+}
+
 /* Success Actions Grid */
 .success-actions-grid {
   display: flex;

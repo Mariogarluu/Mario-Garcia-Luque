@@ -13,7 +13,8 @@ import {
   Radio,
   Sparkles,
   Layers,
-  Users
+  Users,
+  Trophy
 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { TechIcon } from './TechIcons';
@@ -21,7 +22,7 @@ import './Projects.css';
 
 export const Projects: React.FC = () => {
   const { projects } = portfolioData;
-  const [filter, setFilter] = useState<'all' | 'dam' | 'bot'>('all');
+  const [filter, setFilter] = useState<'all' | 'fantasy' | 'dam' | 'bot'>('all');
   const [copiedKey, setCopiedKey] = useState(false);
 
   const filteredProjects = filter === 'all'
@@ -47,7 +48,7 @@ export const Projects: React.FC = () => {
             Proyectos <span className="gradient-text">Destacados</span>
           </h2>
           <p className="section-subtitle">
-            Software en producción y desarrollos reales: la plataforma integral <strong>Meta Force</strong> (Proyecto Intermodular 2º DAM) y el reproductor concurrente <strong>Bot de Música para Discord</strong>.
+            Software en producción y desarrollos reales: el simulador competitivo <strong>LoL Fantasy</strong> (Angular 19 & Supabase), la plataforma integral <strong>Meta Force</strong> (DAM · Multiplataforma) y el reproductor concurrente <strong>Bot de Música para Discord</strong>.
           </p>
         </div>
 
@@ -58,6 +59,12 @@ export const Projects: React.FC = () => {
             className={`filter-tab-btn ${filter === 'all' ? 'active' : ''}`}
           >
             Todos ({projects.length})
+          </button>
+          <button
+            onClick={() => setFilter('fantasy')}
+            className={`filter-tab-btn ${filter === 'fantasy' ? 'active' : ''}`}
+          >
+            LoL Fantasy (Esports · Manager)
           </button>
           <button
             onClick={() => setFilter('dam')}
@@ -81,7 +88,7 @@ export const Projects: React.FC = () => {
               <div 
                 key={project.id} 
                 id={project.id}
-                className={`glass-card project-card ${isMetaForce ? 'featured-flagship' : ''}`}
+                className={`glass-card project-card ${project.featured ? 'featured-flagship' : ''}`}
               >
                 <div className="card-top-accent"></div>
 
@@ -99,7 +106,13 @@ export const Projects: React.FC = () => {
                     {/* Floating Context & Status Badges */}
                     <div className="project-floating-badges">
                       <div className="project-category-badge-floating">
-                        {isMetaForce ? <GraduationCap size={13} className="context-icon purple" /> : <Bot size={13} className="context-icon green" />}
+                        {project.category === 'fantasy' ? (
+                          <Trophy size={13} style={{ color: '#E5C158' }} />
+                        ) : isMetaForce ? (
+                          <GraduationCap size={13} className="context-icon purple" />
+                        ) : (
+                          <Bot size={13} className="context-icon green" />
+                        )}
                         <span>{project.contextLabel}</span>
                       </div>
 
