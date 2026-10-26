@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mario-garcia-luque.vercel.app/sitemap.xml

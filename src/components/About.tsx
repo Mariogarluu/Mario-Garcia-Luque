@@ -16,13 +16,21 @@ import './About.css';
 export const About: React.FC = () => {
   const { about, testimonial, personal } = portfolioData;
 
-  const softSkillIcons = [
-    <Target size={20} className="skill-icon purple" />,
-    <Lightbulb size={20} className="skill-icon green" />,
-    <Compass size={20} className="skill-icon purple" />,
-    <ShieldCheck size={20} className="skill-icon green" />,
-    <HeartHandshake size={20} className="skill-icon purple" />
-  ];
+  const renderSoftSkillIcon = (index: number) => {
+    switch (index % 5) {
+      case 0:
+        return <Target size={20} className="skill-icon purple" />;
+      case 1:
+        return <Lightbulb size={20} className="skill-icon green" />;
+      case 2:
+        return <Compass size={20} className="skill-icon purple" />;
+      case 3:
+        return <ShieldCheck size={20} className="skill-icon green" />;
+      case 4:
+      default:
+        return <HeartHandshake size={20} className="skill-icon purple" />;
+    }
+  };
 
   return (
     <section className="section-wrapper" id="sobre-mi">
@@ -146,7 +154,7 @@ export const About: React.FC = () => {
             {about.softSkills.map((skill, index) => (
               <div key={index} className="glass-card soft-skill-card">
                 <div className="soft-skill-icon-wrapper">
-                  {softSkillIcons[index % softSkillIcons.length]}
+                  {renderSoftSkillIcon(index)}
                 </div>
                 <h4 className="soft-skill-heading">{skill.title}</h4>
                 <p className="soft-skill-desc">{skill.desc}</p>

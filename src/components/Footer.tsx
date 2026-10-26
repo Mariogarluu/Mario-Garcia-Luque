@@ -4,6 +4,8 @@ import { Terminal, ArrowUp, Mail, Check } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
 import './Footer.css';
 
+const currentYear = new Date().getFullYear();
+
 export const Footer: React.FC = () => {
   const { personal } = portfolioData;
   const [copiedDiscord, setCopiedDiscord] = useState(false);
@@ -105,7 +107,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            © {new Date().getFullYear()} {personal.name}. Diseñado & Desarrollado con código limpio.
+            © {currentYear} {personal.name}. Diseñado & Desarrollado con código limpio.
           </div>
 
           <button
