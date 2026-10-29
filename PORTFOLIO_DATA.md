@@ -151,6 +151,20 @@
   - **Minijuego Pro-dle:** Desafío de deducción estilo Wordle (Daily y Endless) con comparación dinámica de región, rol, club, media OVR y nacionalidad.
   - **Base de datos & Sandbox 5v5:** +380 jugadores profesionales con estadísticas detalladas y herramienta de simulación libre con cálculo de química y visualizador en directo.
 
+### 3. Bot de Música & Audio Suite con IA para Discord
+- **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Audio Engine & IA
+- **Categoría:** Audio Streaming / IA / Backend & Bot
+- **Tecnologías:** `Node.js` `Discord.js v14` `@discordjs/voice` `FFmpeg` `Edge-TTS (Voces IA)` `Spotify API` `PM2`
+- **Enlace código / GitHub:** [https://github.com/Mariogarluu/Bot-musica](https://github.com/Mariogarluu/Bot-musica)
+- **Descripción:** Suite completa de audio para servidores de Discord con reproducción continua de alta fidelidad desde YouTube y Spotify, modulación con filtros FFmpeg en vivo, sintetizador de voz neuronal con IA para locución estilo radio, Soundboard interactivo tanto in-Discord como web, y optimización de memoria 24/7 con PM2.
+- **Puntos clave / Logros:**
+  - **Streaming Multiplataforma Dual:** Extracción asíncrona y reproducción sin cortes desde Spotify y YouTube (canciones, álbumes y playlists) con mitigación de restricciones por cookies.
+  - **Filtros de Audio en Tiempo Real (FFmpeg):** Efectos dinámicos en vivo sin salir de la llamada (Nightcore, Vaporwave, Bassboost, audio 8D y Radio retro).
+  - **Locutor DJ Neuronal con IA (`/dj`):** Motor de locución por IA que introduce canciones dinámicamente como en una radio FM en directo, junto a comandos `/tts` y selector interactivo de 10 voces multilingües (`/voice`).
+  - **Panel Táctil Reactivo & UX Anti-Spam:** Embed visual reactivo con cambio dinámico de color (verde, ámbar, violeta), control por botones, colas paginadas (`/queue`) y visor paginado de letras sincronizadas (`/lyrics`).
+  - **Soundboard Studio Web & Modo Ambiente:** Interfaz web local con drag & drop para cargar audios, botonera interactiva en Discord y 6 canales de sonido ambiental infinito (`/ambient`).
+  - **Despliegue y Alta Disponibilidad 24/7:** Configuración de procesos con PM2, servidor HTTP interno de monitorización de salud y control estricto de memoria (`--max-old-space-size`).
+
 ---
 
 ## 7. Educación y Formación Académica (Education)

@@ -438,6 +438,49 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, size = 18, className =
     );
   }
 
+  // 28b. Spotify
+  if (norm.includes('spotify')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="#1DB954">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.498 17.302c-.218.358-.684.47-1.042.253-2.855-1.745-6.449-2.14-10.684-1.173-.41.094-.814-.16-.908-.57-.094-.41.16-.814.57-.908 4.636-1.059 8.608-.614 11.811 1.356.358.218.47.684.253 1.042zm1.467-3.26c-.274.446-.86.588-1.306.314-3.268-2.008-8.25-2.59-12.115-1.417-.5.152-1.03-.135-1.182-.636-.152-.5.135-1.03.636-1.182 4.417-1.34 9.913-.695 13.653 1.615.446.274.588.86.314 1.306zm.126-3.398C15.176 8.318 8.718 8.1 4.974 9.237c-.6.183-1.233-.162-1.416-.762-.183-.6.162-1.233.762-1.416 4.312-1.309 11.439-1.054 15.932 1.614.538.319.712 1.018.393 1.556-.319.538-1.018.712-1.554.393z" />
+      </svg>,
+      'Spotify'
+    );
+  }
+
+  // 28c. YouTube
+  if (norm.includes('youtube') || norm.includes('ytdl')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="#FF0000">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+      </svg>,
+      'YouTube'
+    );
+  }
+
+  // 28d. PM2
+  if (norm.includes('pm2')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#2B037A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" fill="#2B037A" />
+        <path d="M8 8h5a2.5 2.5 0 0 1 0 5H8v3m8-3v3" stroke="#FFFFFF" strokeWidth="2" />
+      </svg>,
+      'PM2 Process Manager'
+    );
+  }
+
+  // 28e. TTS / Voces IA
+  if (norm.includes('tts') || norm.includes('voces ia') || norm.includes('edge-tts')) {
+    return wrap(
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" fill="#10B981" fillOpacity="0.2" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#34D399" />
+        <line x1="12" y1="19" x2="12" y2="22" stroke="#34D399" />
+      </svg>,
+      'Voces Neuronales IA (TTS)'
+    );
+  }
+
   // 29. VS Code
   if (norm.includes('vs code') || norm.includes('vscode')) {
     return wrap(

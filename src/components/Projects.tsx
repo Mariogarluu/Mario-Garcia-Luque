@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
             Proyectos <span className="gradient-text">Destacados</span>
           </h2>
           <p className="section-subtitle">
-            Software en producción y desarrollos reales: el simulador competitivo <strong>LoL Fantasy</strong> (Angular 19 & Supabase), la plataforma integral <strong>Meta Force</strong> (DAM · Multiplataforma) y el reproductor concurrente <strong>Bot de Música para Discord</strong>.
+            Software en producción y desarrollos reales: el simulador competitivo <strong>LoL Fantasy</strong> (Angular 19 & Supabase), la plataforma integral <strong>Meta Force</strong> (DAM · Multiplataforma) y la suite interactiva <strong>Bot de Música & Audio AI para Discord</strong>.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export const Projects: React.FC = () => {
             onClick={() => setFilter('bot')}
             className={`filter-tab-btn ${filter === 'bot' ? 'active' : ''}`}
           >
-            Bot de Música (Discord · Node.js)
+            Bot de Música & IA (Discord · Node.js)
           </button>
         </div>
 

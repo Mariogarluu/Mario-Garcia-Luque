@@ -540,38 +540,41 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "bot-musica-discord",
-      title: "Bot de Música para Discord",
-      subtitle: "Audio streaming concurrente, colas dinámicas y comandos slash en tiempo real",
+      title: "Bot de Música & Audio Suite con IA para Discord",
+      subtitle: "Streaming Multiplataforma (Spotify/YouTube), Filtros en Tiempo Real, Locutor DJ con IA y Soundboard Web",
       contextType: "personal",
-      contextLabel: "Proyecto Personal · Backend Node.js",
-      roleInProject: "Desarrollador Backend & Integración de API",
+      contextLabel: "Proyecto Personal · Audio Engine, IA & Node.js",
+      roleInProject: "Desarrollador Full Stack / Backend & Audio Engine",
       category: "bot",
       image: "/projects/bot-musica.jpg",
-      statusType: "deprecated",
-      statusNotice: "Actualmente en desuso debido a actualizaciones y deprecaciones en la API de Discord y sus librerías de streaming de voz (@discordjs/voice / cambios en YouTube).",
+      statusType: "active",
       githubUrl: "https://github.com/Mariogarluu/Bot-musica",
       repositories: [
-        { label: "Repositorio Bot-musica", url: "https://github.com/Mariogarluu/Bot-musica", badge: "Node.js v16+" }
+        { label: "Repositorio Bot-musica", url: "https://github.com/Mariogarluu/Bot-musica", badge: "Node.js v20+ · Discord.js v14" }
       ],
-      description: "Bot asíncrono para servidores de Discord desarrollado con Node.js y Discord.js v14. Implementa streaming de audio de alta fidelidad desde YouTube en canales de voz, gestión dinámica de colas de reproducción concurrentes, comandos slash (/play, /queue, /pause, /skip, /stop) y embeds visuales interactivos. Actualmente en desuso debido a cambios estructurales y deprecaciones en la API de voz de Discord y proveedores de streaming.",
+      description: "Suite interactiva y bot de música de alto rendimiento para servidores de Discord desarrollado con Node.js, Discord.js v14 y @discordjs/voice. Proporciona streaming de audio de alta fidelidad con soporte multiplataforma dual para YouTube (vídeos directos, búsquedas, shorts y playlists) y Spotify (tracks individuales, álbumes y playlists con resolución de audio automática). Incorpora procesamiento de filtros de audio en tiempo real con FFmpeg (Nightcore, Vaporwave, Bassboost, 8D, Radio), un motor de síntesis de voz neuronal (Edge-TTS) con 'Modo Locutor DJ' que presenta canciones como en la radio en directo y comandos /tts y /voice con más de 10 personalidades vocales, sincronización de letras paginadas (LRCLIB API), Soundboard interactivo tanto dentro de Discord como en panel web independiente (Soundboard Studio Web), modos de concentración ambiental y arquitectura 24/7 optimizada con PM2.",
       technologies: [
         "Node.js",
-        "JavaScript (ES6+)",
         "Discord.js v14",
         "@discordjs/voice",
         "FFmpeg",
-        "yt-search",
-        "@distube/ytdl-core",
-        "Async/Await",
-        "Event-Driven"
+        "Edge-TTS (Voces IA)",
+        "Spotify Engine",
+        "YouTube (@distube/ytdl)",
+        "PM2 (24/7 Hosting)",
+        "LRCLIB API",
+        "Web Soundboard Studio",
+        "Event-Driven Architecture"
       ],
       highlights: [
-        "Arquitectura orientada a eventos para streaming continuo y control de reproducción sin bloqueos.",
-        "Gestión de colas de reproducción dinámicas: soporte para encolar canciones, pausar, reanudar, saltar pistas y búsqueda directa en YouTube.",
-        "Implementación completa de Slash Commands de Discord con registro automatizado mediante script de despliegue REST.",
-        "Nota de ciclo de vida: En desuso como consecuencia de las actualizaciones en las políticas y protocolos de la API de Discord."
+        "Streaming Multiplataforma Dual: Pipeline de extracción asíncrona de audio de alta fidelidad para YouTube y Spotify (canciones, álbumes y playlists completas) con bypass de restricciones mediante cookies.",
+        "Procesamiento de Filtros FFmpeg en Tiempo Real: Modulación y aplicación en caliente de efectos dinámicos (Nightcore, Vaporwave, Bassboost, audio espacial 8D y filtro Radio) sin interrumpir el canal de voz.",
+        "Motor de Voces Neuronales IA & Modo Locutor DJ: Síntesis vocal con Edge-TTS para anunciar temas con estilo de radio en directo con transiciones fluidas (/dj) y comandos de locución multilingüe (/tts, /voice).",
+        "UX Reactiva e In-Place Anti-Spam: Embed visual táctil interactivo con estado cromático reactivo (verde, ámbar, violeta), cola paginada (/queue) y visualizador interactivo de letras sincronizadas (/lyrics).",
+        "Soundboard Studio & Modo Ambiente: Botonera in-Discord y panel web independiente (/soundboard-web) con carga drag & drop de sonidos personalizados, junto a 6 presets de audio ambiental en bucle (/ambient).",
+        "Alta Disponibilidad 24/7 y Optimización de Memoria: Configurado con PM2 para reinicio automático ante excepciones, servidor interno de health check HTTP y control de memoria heap (--max-old-space-size)."
       ],
-      featured: false
+      featured: true
     }
   ]
 };
