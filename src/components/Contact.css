@@ -545,4 +545,51 @@
   }
 }
 
+/* Privacy Checkbox (RGPD) */
+.form-privacy-group {
+  margin: 1rem 0 1.25rem 0;
+}
+
+.privacy-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.privacy-checkbox {
+  margin-top: 3px;
+  accent-color: var(--purple-500);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.privacy-link-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: var(--purple-400);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline;
+}
+
+.privacy-link-btn:hover {
+  color: var(--green-400);
+}
+
+[data-theme="light"] .privacy-link-btn {
+  color: var(--purple-600);
+}
+
+
 

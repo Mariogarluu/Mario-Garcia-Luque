@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Terminal, ArrowUp, Mail, Check } from 'lucide-react';
+import { Terminal, ArrowUp, Mail, Check, ShieldCheck } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
+import type { LegalTab } from './LegalModal';
 import './Footer.css';
 
 const currentYear = new Date().getFullYear();
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal: (tab: LegalTab) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   const { personal } = portfolioData;
   const [copiedDiscord, setCopiedDiscord] = useState(false);
 
@@ -89,9 +94,41 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
+          {/* Legal & Privacy Links */}
+          <div className="footer-links-col">
+            <h4 className="footer-col-title">Legal &amp; Privacidad</h4>
+            <div className="footer-links-list">
+              <button
+                type="button"
+                onClick={() => onOpenLegal('aviso-legal')}
+                className="footer-legal-btn"
+              >
+                Aviso Legal
+              </button>
+              <button
+                type="button"
+                onClick={() => onOpenLegal('privacidad')}
+                className="footer-legal-btn"
+              >
+                Política de Privacidad
+              </button>
+              <button
+                type="button"
+                onClick={() => onOpenLegal('cookies')}
+                className="footer-legal-btn"
+              >
+                Política de Cookies
+              </button>
+              <div className="footer-rgpd-badge">
+                <ShieldCheck size={14} className="text-green" />
+                <span>RGPD &amp; LSSI Cumplido</span>
+              </div>
+            </div>
+          </div>
+
           {/* Deployment & Info */}
           <div className="footer-info-col">
-            <h4 className="footer-col-title">Despliegue & Tech</h4>
+            <h4 className="footer-col-title">Despliegue &amp; Tech</h4>
             <p className="footer-deploy-text">
               Optimizado para despliegue 100% gratuito y continuo en <strong>Vercel</strong> o <strong>Cloudflare Pages</strong> con CI/CD desde GitHub.
             </p>
@@ -108,6 +145,32 @@ export const Footer: React.FC = () => {
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
             © {currentYear} {personal.name}. Diseñado & Desarrollado con código limpio.
+          </div>
+
+          <div className="footer-bottom-legal-links">
+            <button
+              type="button"
+              onClick={() => onOpenLegal('aviso-legal')}
+              className="footer-legal-inline-btn"
+            >
+              Aviso Legal
+            </button>
+            <span className="footer-dot-sep">•</span>
+            <button
+              type="button"
+              onClick={() => onOpenLegal('privacidad')}
+              className="footer-legal-inline-btn"
+            >
+              Privacidad (RGPD)
+            </button>
+            <span className="footer-dot-sep">•</span>
+            <button
+              type="button"
+              onClick={() => onOpenLegal('cookies')}
+              className="footer-legal-inline-btn"
+            >
+              Cookies
+            </button>
           </div>
 
           <button

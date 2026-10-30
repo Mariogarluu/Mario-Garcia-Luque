@@ -13,6 +13,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
+import type { LegalTab } from './LegalModal';
 import './Contact.css';
 
 // Custom WhatsApp SVG for recognizable branding
@@ -22,7 +23,11 @@ const WhatsAppIcon: React.FC<{ size?: number; className?: string }> = ({ size = 
   </svg>
 );
 
-export const Contact: React.FC = () => {
+interface ContactProps {
+  onOpenLegal?: (tab: LegalTab) => void;
+}
+
+export const Contact: React.FC<ContactProps> = ({ onOpenLegal }) => {
   const { personal } = portfolioData;
 
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -429,6 +434,27 @@ export const Contact: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       disabled={isSubmitting}
                     />
+                  </div>
+
+                  <div className="form-privacy-group">
+                    <label className="privacy-checkbox-label">
+                      <input
+                        type="checkbox"
+                        required
+                        className="privacy-checkbox"
+                      />
+                      <span>
+                        He leído y acepto la{' '}
+                        <button
+                          type="button"
+                          className="privacy-link-btn"
+                          onClick={() => onOpenLegal?.('privacidad')}
+                        >
+                          Política de Privacidad
+                        </button>{' '}
+                        (los datos solo se usarán para dar respuesta a tu mensaje).
+                      </span>
+                    </label>
                   </div>
 
                   <button 

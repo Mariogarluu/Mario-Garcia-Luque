@@ -13,10 +13,17 @@
   margin-bottom: 3rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .footer-main {
-    grid-template-columns: 1.5fr 1fr 1.2fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .footer-main {
+    grid-template-columns: 1.4fr 0.9fr 1fr 1.2fr;
+    gap: 2.5rem;
   }
 }
 
@@ -62,6 +69,7 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .footer-links-list a:hover {
@@ -70,6 +78,41 @@
 
 [data-theme="light"] .footer-links-list a:hover {
   color: var(--purple-500);
+}
+
+/* Legal buttons */
+.footer-legal-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: inherit;
+}
+
+.footer-legal-btn:hover {
+  color: var(--purple-400);
+}
+
+[data-theme="light"] .footer-legal-btn:hover {
+  color: var(--purple-600);
+}
+
+.footer-rgpd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.785rem;
+  color: var(--green-400);
+  background: var(--green-subtle);
+  border: 1px solid var(--border-green);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  width: fit-content;
 }
 
 /* Deploy Col */
@@ -100,17 +143,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-light);
   font-size: 0.85rem;
   color: var(--text-muted);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .footer-bottom-bar {
     flex-direction: row;
   }
+}
+
+.footer-bottom-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-legal-inline-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease;
+  font-family: inherit;
+}
+
+.footer-legal-inline-btn:hover {
+  color: var(--purple-400);
+  text-decoration: underline;
+}
+
+.footer-dot-sep {
+  color: var(--border-light);
+  font-size: 0.75rem;
 }
 
 .back-to-top-btn {
@@ -124,6 +196,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   color: var(--text-secondary);
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
