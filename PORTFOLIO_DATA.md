@@ -40,7 +40,7 @@
 
 ## 3. Estadísticas Clave (Highlights / Quick Stats)
 
-- **Educación técnica:** 4 titulaciones/programas clave (SMR + DAW + DAM + 42 Málaga).
+- **Educación técnica:** 5 titulaciones/programas clave (Bootcamp Python & IA Conecta+ / Esplai + DAM + 42 Málaga + DAW + SMR).
 - **Stack dominante:** React.js, TypeScript, Node.js, Supabase, PostgreSQL.
 - **Enfoque de desarrollo:** Componentes modulares, APIs REST, arquitecturas tiempo real, responsive design y UI/UX cuidada.
 - **Mentalidad:** Orientado a resultados, depuración analítica de errores y aprendizaje continuo.
@@ -60,7 +60,7 @@
 - **Node.js & Express** (Avanzado): Creación y consumo de APIs RESTful, middlewares, arquitectura MVC.
 - **Supabase** (Avanzado): Autenticación (Auth), bases de datos en tiempo real (Realtime), Storage, Row Level Security (RLS).
 - **PHP & Laravel** (Intermedio-Avanzado): Desarrollo backend clásico, patrones MVC, enrutamiento y migraciones.
-- **Python & Django** (Intermedio): Scripting, automatización y desarrollo backend.
+- **Python & Ecosistema IA** (Intermedio-Avanzado): Desarrollo en Python, POO, agentes inteligentes autónomos (LangChain, LangGraph), integración de LLMs (Ollama, Groq) y bases de datos vectoriales RAG (ChromaDB).
 - **AWS** (Básico-Intermedio): Despliegues y servicios en la nube.
 
 ### Bases de Datos
@@ -171,6 +171,7 @@
 
 | Periodo | Titulación / Formación | Centro / Institución | Temas Clave |
 |---|---|---|---|
+| **2026** | **Coding Bootcamp Málaga — Python Orientado a Inteligencia Artificial (IAPython_4)** | Fundación Conecta+ (antigua Fundación Esplai) | Python avanzado, POO, agentes autónomos (LangChain, LangGraph, Ollama, Groq), sistemas RAG con almacenamiento vectorial (ChromaDB), orientación laboral activa y desarrollo de soft skills |
 | **2024 – 2026** | **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)** | CPFP Alan Turing (Málaga) | Java, C#, Android Studio, patrones de arquitectura, desarrollo multiplataforma, bases de datos relacionales |
 | **12/2024 – 07/2025** | **Formación en Software y Algoritmia (Main Core)** | 42 Málaga (Fundación Telefónica) | Programación rigurosa en C, algoritmos de ordenación y búsqueda, gestión estricta de memoria, trabajo colaborativo P2P |
 | **2022 – 2024** | **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)** | I.E.S. Gerald Brenan (Málaga) | Desarrollo cliente/servidor, JavaScript, PHP, Laravel, SQL, arquitecturas web y despliegue |
@@ -198,6 +199,7 @@
 - **Orientación a Resultados y Pragmatismo:** Enfoque en entregar software funcional, modular y libre de sobreingeniería.
 - **Pensamiento Analítico y Deductivo:** Destreza en la depuración paso a paso de bugs y en el entendimiento profundo de la arquitectura de datos.
 - **Proactividad y Autoaprendizaje:** Demostrada al compaginar formación superior con la metodología intensiva de 42 Málaga y proyectos reales.
+- **Orientación Laboral y Dinámicas de Equipo IT:** Capacitación personalizada en soft skills por la Fundación Esplai / Conecta+ (comunicación asertiva, adaptabilidad ante el cambio, preparación para procesos de selección técnicos y cultura agile).
 - **Empatía y Comunicación Positiva:** Habilidad para integrarse en equipos multidisciplinares, escuchar activamente y construir buen clima laboral.
 - **Sensibilidad Social e Inclusión:** Reforzada a través de años de voluntariado y monitorización deportiva con niños con diversidad funcional.
 
@@ -237,8 +239,8 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
   },
   "skills": {
     "frontend": ["React.js", "TypeScript", "JavaScript (ES6+)", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"],
-    "backend": ["Node.js", "Express", "Supabase", "PHP", "Laravel", "Python", "Django", "RESTful APIs"],
-    "databases": ["PostgreSQL", "MySQL", "Supabase Realtime/Auth", "PL/SQL"],
+    "backend": ["Node.js", "Express", "Supabase", "PHP", "Laravel", "Python (LangChain, LangGraph, RAG)", "RESTful APIs"],
+    "databases": ["PostgreSQL", "MySQL", "Supabase Realtime/Auth", "PL/SQL", "ChromaDB (Vector Store)"],
     "systemsAndCore": ["C", "C++", "Java", "C#", "Linux", "Data Structures", "Memory Management"],
     "tools": ["Git", "GitHub", "AWS", "Claude Code / AI Tooling", "WordPress", "WooCommerce", "VS Code"]
   },
@@ -270,6 +272,13 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
   ],
   "projects": [],
   "education": [
+    {
+      "degree": "Coding Bootcamp Málaga — Python Orientado a Inteligencia Artificial (IAPython_4)",
+      "institution": "Fundación Conecta+ (antigua Fundación Esplai)",
+      "location": "Málaga",
+      "period": "2026",
+      "topics": "Python avanzado, POO, agentes inteligentes (LangChain, LangGraph, Ollama, Groq), sistemas RAG (ChromaDB), orientación laboral activa y soft skills"
+    },
     {
       "degree": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
       "institution": "CPFP Alan Turing",

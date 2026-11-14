@@ -159,7 +159,7 @@ export const portfolioData: PortfolioData = {
     ]
   },
   quickStats: [
-    { label: "Formación de Élite", value: "42 Málaga + DAW + DAM", detail: "Rigor algorítmico y doble titulación técnica superior" },
+    { label: "Formación de Élite", value: "Bootcamp IA + 42 + DAM", detail: "Python & IA, rigor algorítmico y titulación superior técnica" },
     { label: "Stack Principal", value: "React + TS + Supabase", detail: "Frontend moderno, PostgreSQL en tiempo real y APIs REST" },
     { label: "Modalidad", value: "Empleo / Freelance", detail: "Contratación directa o desarrollo por hitos y proyectos" },
     { label: "Disponibilidad", value: "Inmediata", detail: "Málaga presencial, híbrido o remoto global" }
@@ -216,6 +216,10 @@ export const portfolioData: PortfolioData = {
         desc: "Acostumbrado a aprender tecnologías rápido y adaptarme a cualquier entorno exigente."
       },
       {
+        title: "Orientación Laboral & Dinámicas Ágiles",
+        desc: "Formación en soft skills y preparación profesional en el sector tecnológico por Fundación Conecta+ (antigua Esplai)."
+      },
+      {
         title: "Comunicación Transparente y Trabajo en Equipo",
         desc: "Trato directo y cercano tanto con perfiles técnicos como con clientes finales."
       },
@@ -248,7 +252,7 @@ export const portfolioData: PortfolioData = {
         { name: "Node.js & Express", level: "Avanzado" },
         { name: "Diseño y consumo de APIs REST", level: "Avanzado" },
         { name: "PHP & Laravel", level: "Intermedio" },
-        { name: "Python & Django", level: "Intermedio" },
+        { name: "Python (LangChain, LangGraph, RAG)", level: "Avanzado" },
         { name: "Arquitectura MVC & Modular", level: "Avanzado" },
         { name: "Despliegues Cloud (Vercel, Render, AWS)", level: "Intermedio" }
       ]
@@ -261,6 +265,7 @@ export const portfolioData: PortfolioData = {
         { name: "MySQL / MariaDB", level: "Avanzado" },
         { name: "Supabase Realtime & Storage", level: "Avanzado" },
         { name: "Consultas SQL optimizadas", level: "Avanzado" },
+        { name: "ChromaDB (Vector Store para RAG)", level: "Avanzado" },
         { name: "PL/SQL (Triggers y funciones)", level: "Intermedio" }
       ]
     },
@@ -363,6 +368,24 @@ export const portfolioData: PortfolioData = {
     }
   ],
   education: [
+    {
+      id: "bootcamp-ia-python",
+      degree: "Coding Bootcamp Málaga — Python Orientado a Inteligencia Artificial (IAPython_4)",
+      institution: "Fundación Conecta+ (antigua Fundación Esplai)",
+      institutionImage: "/conectamas.png",
+      location: "Málaga",
+      period: "2026",
+      topics: "Python avanzado, programación orientada a objetos, arquitectura de agentes autónomos (LangChain, LangGraph), integración de modelos locales y cloud (Ollama, Groq), sistemas RAG con almacenamiento vectorial persistente (ChromaDB), orientación laboral activa y desarrollo de soft skills.",
+      iconType: "terminal",
+      relatedProject: {
+        name: "Coding Bootcamp Málaga · Python & IA",
+        badge: "Bootcamp IAPython_4",
+        description: "Meta-repositorio estructurado con submódulos Git: agentes autónomos ReAct, pipelines RAG con ChromaDB, integración con Ollama/Groq y scripts de automatización.",
+        url: "https://github.com/Mariogarluu/Bootcamp-Python",
+        isExternal: true,
+        buttonText: "Ver Código en GitHub"
+      }
+    },
     {
       id: "dam",
       degree: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
