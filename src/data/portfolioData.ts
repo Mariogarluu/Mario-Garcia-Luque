@@ -155,7 +155,7 @@ export const portfolioData: PortfolioData = {
     banner: "/banner.png",
     languages: [
       { name: "Español", level: "Nativo" },
-      { name: "Inglés", level: "B1 / Professional Working" }
+      { name: "Inglés", level: "B2 / Competencia Profesional Técnica" }
     ]
   },
   quickStats: [

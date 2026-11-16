@@ -19,7 +19,7 @@
 - **Modalidad:** Presencial o híbrido en Málaga y alrededores (Carnet de conducir B) | 100% Remoto (cualquier ubicación)
 - **Idiomas:**
   - **Español:** Nativo
-  - **Inglés:** B1 / Professional Working (lectura técnica, documentación, resolución de problemas y comunicación profesional fluida)
+  - **Inglés:** B2 / Professional Working (lectura técnica fluida, documentación, resolución de problemas y comunicación profesional en entornos de desarrollo)
 
 ---
 
@@ -229,7 +229,7 @@ Para facilitar que importes directamente estos datos en un archivo como `data.js
     "driverLicense": "B",
     "languages": [
       { "name": "Español", "level": "Nativo" },
-      { "name": "Inglés", "level": "B1 / Professional Working" }
+      { "name": "Inglés", "level": "B2 / Professional Working" }
     ]
   },
   "about": {

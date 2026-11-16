@@ -90,7 +90,7 @@ export const About: React.FC = () => {
                 🚗 {personal.driverLicense}
               </span>
               <span className="meta-pill">
-                🗣️ Español (Nativo) · Inglés (B1 Profesional)
+                🗣️ Español (Nativo) · Inglés (B2 Profesional Técnico)
               </span>
             </div>
           </div>
