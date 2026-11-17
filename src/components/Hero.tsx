@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { useLanguage } from '../context/LanguageContext';
 import { 
   ArrowRight, 
   Mail, 
@@ -9,13 +10,15 @@ import {
   Briefcase, 
   Rocket, 
   Layers, 
-  Sparkles 
+  Sparkles,
+  Download
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, DiscordIcon } from './Icons';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
   const { personal, quickStats } = portfolioData;
+  const { language, cvDownload } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [copiedDiscord, setCopiedDiscord] = useState(false);
 
@@ -81,22 +84,52 @@ export const Hero: React.FC = () => {
           {/* Call to Actions */}
           <div className="hero-cta-group">
             <a href="#contacto" className="btn btn-primary">
-              <span>Hablemos de tu proyecto / vacante</span>
+              <span>{language === 'en' ? 'Get In Touch' : 'Hablemos de tu proyecto / vacante'}</span>
               <ArrowRight size={17} />
+            </a>
+
+            {/* Direct CV Download tailored to language norms */}
+            <a
+              href={cvDownload.url}
+              download={cvDownload.fileName}
+              className="btn btn-secondary hero-cv-btn"
+              title={`${cvDownload.label} (${cvDownload.helperText})`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(139, 92, 246, 0.18) 100%)',
+                color: '#34D399',
+                border: '1px solid rgba(52, 211, 153, 0.4)',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              <Download size={17} />
+              <span>{cvDownload.label}</span>
+              <span style={{
+                fontSize: '0.68rem',
+                padding: '2px 6px',
+                borderRadius: 6,
+                background: 'rgba(52, 211, 153, 0.15)',
+                color: '#6ee7b7',
+              }}>
+                {cvDownload.badge}
+              </span>
             </a>
 
             <a href="#proyectos" className="btn btn-secondary">
               <Layers size={17} />
-              <span>Ver Proyectos</span>
+              <span>{language === 'en' ? 'View Projects' : 'Ver Proyectos'}</span>
             </a>
 
             <button 
               onClick={handleCopyEmail} 
               className="btn btn-outline-green"
-              title="Copiar email al portapapeles"
+              title={language === 'en' ? 'Copy email to clipboard' : 'Copiar email al portapapeles'}
             >
               {copied ? <Check size={16} /> : <Copy size={16} />}
-              <span>{copied ? '¡Email Copiado!' : 'Copiar Email'}</span>
+              <span>{copied ? (language === 'en' ? 'Email Copied!' : '¡Email Copiado!') : (language === 'en' ? 'Copy Email' : 'Copiar Email')}</span>
             </button>
           </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
 import { NeuralBackground } from './components/NeuralBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -28,28 +29,30 @@ export const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <NeuralBackground />
-      <div className="portfolio-app">
-        <Navbar />
-        <main>
-          <Hero />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Education />
-          <Services />
-          <About />
-          <Contact onOpenLegal={handleOpenLegal} />
-        </main>
-        <Footer onOpenLegal={handleOpenLegal} />
+      <LanguageProvider>
+        <NeuralBackground />
+        <div className="portfolio-app">
+          <Navbar />
+          <main>
+            <Hero />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Education />
+            <Services />
+            <About />
+            <Contact onOpenLegal={handleOpenLegal} />
+          </main>
+          <Footer onOpenLegal={handleOpenLegal} />
 
-        <LegalModal
-          isOpen={isLegalOpen}
-          activeTab={activeLegalTab}
-          onClose={handleCloseLegal}
-          onTabChange={setActiveLegalTab}
-        />
-      </div>
+          <LegalModal
+            isOpen={isLegalOpen}
+            activeTab={activeLegalTab}
+            onClose={handleCloseLegal}
+            onTabChange={setActiveLegalTab}
+          />
+        </div>
+      </LanguageProvider>
     </ThemeProvider>
   );
 };

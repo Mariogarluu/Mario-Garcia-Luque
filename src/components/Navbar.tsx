@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X, Terminal, ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { Sun, Moon, Menu, X, Terminal, ArrowUpRight, Download, Languages } from 'lucide-react';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, cvDownload } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -37,7 +39,15 @@ export const Navbar: React.FC = () => {
     }
   }, [mobileMenuOpen]);
 
-  const navLinks = [
+  const navLinks = language === 'en' ? [
+    { label: 'Skills', href: '#habilidades' },
+    { label: 'Experience', href: '#experiencia' },
+    { label: 'Projects', href: '#proyectos' },
+    { label: 'Education', href: '#formacion' },
+    { label: 'Services', href: '#servicios' },
+    { label: 'About', href: '#sobre-mi' },
+    { label: 'Contact', href: '#contacto' },
+  ] : [
     { label: 'Habilidades', href: '#habilidades' },
     { label: 'Experiencia', href: '#experiencia' },
     { label: 'Proyectos', href: '#proyectos' },
@@ -76,6 +86,56 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action Buttons */}
           <div className="nav-actions">
+            {/* Language Switcher Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="lang-toggle-btn"
+              aria-label={`Cambiar a ${language === 'es' ? 'Inglés' : 'Español'}`}
+              title={`Idioma actual: ${language === 'es' ? 'Español' : 'English'}. Clic para cambiar.`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 5,
+                padding: '6px 10px',
+                borderRadius: 10,
+                fontSize: '0.78rem',
+                fontWeight: 700,
+                background: 'rgba(18, 26, 46, 0.75)',
+                border: '1px solid rgba(139, 92, 246, 0.35)',
+                color: '#f8fafc',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+              }}
+            >
+              <Languages size={14} color="#a78bfa" />
+              <span>{language.toUpperCase()}</span>
+            </button>
+
+            {/* CV Download Button (Tailored by Language Norms) */}
+            <a
+              href={cvDownload.url}
+              download={cvDownload.fileName}
+              className="btn btn-sm btn-outline-cv"
+              title={`${cvDownload.label} (${cvDownload.helperText})`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                padding: '7px 13px',
+                borderRadius: 10,
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(139, 92, 246, 0.18) 100%)',
+                color: '#34D399',
+                border: '1px solid rgba(52, 211, 153, 0.4)',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <Download size={14} />
+              <span>{cvDownload.label}</span>
+            </a>
+
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
@@ -97,7 +157,7 @@ export const Navbar: React.FC = () => {
 
             {/* Quick Contact CTA */}
             <a href="#contacto" className="btn btn-sm btn-primary nav-cta">
-              <span>Hablemos</span>
+              <span>{language === 'en' ? "Let's Talk" : 'Hablemos'}</span>
               <ArrowUpRight size={15} />
             </a>
 
@@ -166,6 +226,32 @@ export const Navbar: React.FC = () => {
 
               {/* Drawer Footer Actions */}
               <div className="mobile-menu-footer">
+                {/* Mobile Language Toggle */}
+                <div className="mobile-menu-theme-row">
+                  <span className="mobile-theme-label">Idioma / Language</span>
+                  <button
+                    onClick={toggleLanguage}
+                    className="lang-toggle-btn"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '6px 14px',
+                      borderRadius: 10,
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      background: 'rgba(18, 26, 46, 0.9)',
+                      border: '1px solid rgba(139, 92, 246, 0.35)',
+                      color: '#f8fafc',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <Languages size={15} color="#a78bfa" />
+                    <span>{language === 'es' ? 'Español (ES)' : 'English (EN)'}</span>
+                  </button>
+                </div>
+
+                {/* Mobile Theme Toggle */}
                 <div className="mobile-menu-theme-row">
                   <span className="mobile-theme-label">Tema visual</span>
                   <button
@@ -184,12 +270,36 @@ export const Navbar: React.FC = () => {
                   </button>
                 </div>
 
+                {/* Mobile CV Download Button */}
+                <a
+                  href={cvDownload.url}
+                  download={cvDownload.fileName}
+                  className="btn btn-secondary mobile-cv-btn"
+                  onClick={handleLinkClick}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 8,
+                    padding: '10px 16px',
+                    borderRadius: 10,
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    color: '#34D399',
+                    border: '1px solid rgba(52, 211, 153, 0.35)',
+                    background: 'rgba(16, 185, 129, 0.1)',
+                  }}
+                >
+                  <Download size={16} />
+                  <span>{cvDownload.label} ({cvDownload.badge})</span>
+                </a>
+
                 <a
                   href="#contacto"
                   className="btn btn-primary mobile-cta-btn"
                   onClick={handleLinkClick}
                 >
-                  <span>Contactar</span>
+                  <span>{language === 'en' ? 'Get In Touch' : 'Contactar'}</span>
                   <ArrowUpRight size={16} />
                 </a>
               </div>
