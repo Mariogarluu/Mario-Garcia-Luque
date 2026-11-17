@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
     }
   }, [mobileMenuOpen]);
 
-  const navLinks = language === 'en' ? [
+  const allNavLinks = language === 'en' ? [
     { label: 'Skills', href: '#habilidades' },
     { label: 'Experience', href: '#experiencia' },
     { label: 'Projects', href: '#proyectos' },
@@ -56,6 +56,9 @@ export const Navbar: React.FC = () => {
     { label: 'Sobre Mí', href: '#sobre-mi' },
     { label: 'Contacto', href: '#contacto' },
   ];
+
+  // En la barra de escritorio, 'Contacto' ya está cubierto por el botón de acción principal 'Hablemos ↗'
+  const desktopNavLinks = allNavLinks.filter((link) => link.href !== '#contacto');
 
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
@@ -77,7 +80,7 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Navigation Links */}
           <nav className="desktop-nav" aria-label="Navegación principal">
-            {navLinks.map((link) => (
+            {desktopNavLinks.map((link) => (
               <a key={link.href} href={link.href} className="nav-link">
                 {link.label}
               </a>
@@ -92,22 +95,8 @@ export const Navbar: React.FC = () => {
               className="lang-toggle-btn"
               aria-label={`Cambiar a ${language === 'es' ? 'Inglés' : 'Español'}`}
               title={`Idioma actual: ${language === 'es' ? 'Español' : 'English'}. Clic para cambiar.`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 5,
-                padding: '6px 10px',
-                borderRadius: 10,
-                fontSize: '0.78rem',
-                fontWeight: 700,
-                background: 'rgba(18, 26, 46, 0.75)',
-                border: '1px solid rgba(139, 92, 246, 0.35)',
-                color: '#f8fafc',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-              }}
             >
-              <Languages size={14} color="#a78bfa" />
+              <Languages size={14} className="lang-icon" />
               <span>{language.toUpperCase()}</span>
             </button>
 
@@ -117,23 +106,10 @@ export const Navbar: React.FC = () => {
               download={cvDownload.fileName}
               className="btn btn-sm btn-outline-cv"
               title={`${cvDownload.label} (${cvDownload.helperText})`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                padding: '7px 13px',
-                borderRadius: 10,
-                fontSize: '0.8rem',
-                fontWeight: 700,
-                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(139, 92, 246, 0.18) 100%)',
-                color: '#34D399',
-                border: '1px solid rgba(52, 211, 153, 0.4)',
-                textDecoration: 'none',
-                transition: 'all 0.2s ease',
-              }}
             >
               <Download size={14} />
-              <span>{cvDownload.label}</span>
+              <span className="cv-label-full">{cvDownload.label}</span>
+              <span className="cv-label-short">CV</span>
             </a>
 
             {/* Theme Toggle Button */}
@@ -150,9 +126,6 @@ export const Navbar: React.FC = () => {
                   <Moon size={17} className="theme-icon moon" />
                 )}
               </div>
-              <span className="theme-label-hint">
-                {theme === 'dark' ? 'Claro' : 'Oscuro'}
-              </span>
             </button>
 
             {/* Quick Contact CTA */}
@@ -168,7 +141,7 @@ export const Navbar: React.FC = () => {
               aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -211,7 +184,7 @@ export const Navbar: React.FC = () => {
 
               {/* Mobile Navigation Links */}
               <nav className="mobile-menu-links" aria-label="Navegación móvil">
-                {navLinks.map((link) => (
+                {allNavLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
@@ -231,22 +204,9 @@ export const Navbar: React.FC = () => {
                   <span className="mobile-theme-label">Idioma / Language</span>
                   <button
                     onClick={toggleLanguage}
-                    className="lang-toggle-btn"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 6,
-                      padding: '6px 14px',
-                      borderRadius: 10,
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      background: 'rgba(18, 26, 46, 0.9)',
-                      border: '1px solid rgba(139, 92, 246, 0.35)',
-                      color: '#f8fafc',
-                      cursor: 'pointer',
-                    }}
+                    className="mobile-lang-btn"
                   >
-                    <Languages size={15} color="#a78bfa" />
+                    <Languages size={15} className="lang-icon" />
                     <span>{language === 'es' ? 'Español (ES)' : 'English (EN)'}</span>
                   </button>
                 </div>
@@ -274,21 +234,8 @@ export const Navbar: React.FC = () => {
                 <a
                   href={cvDownload.url}
                   download={cvDownload.fileName}
-                  className="btn btn-secondary mobile-cv-btn"
+                  className="mobile-cv-btn"
                   onClick={handleLinkClick}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: 8,
-                    padding: '10px 16px',
-                    borderRadius: 10,
-                    fontWeight: 700,
-                    textDecoration: 'none',
-                    color: '#34D399',
-                    border: '1px solid rgba(52, 211, 153, 0.35)',
-                    background: 'rgba(16, 185, 129, 0.1)',
-                  }}
                 >
                   <Download size={16} />
                   <span>{cvDownload.label} ({cvDownload.badge})</span>
