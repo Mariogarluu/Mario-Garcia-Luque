@@ -141,6 +141,23 @@ export const Education: React.FC = () => {
                       )}
                     </div>
                   )}
+
+                  {/* Official Certificate Link */}
+                  {item.certificateUrl && (
+                    <div className="edu-certificate-box">
+                      <a
+                        href={item.certificateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="edu-cert-action"
+                        title="Ver Certificado Oficial Acreditado (PDF)"
+                      >
+                        <Award size={14} className="edu-cert-icon" />
+                        <span>{item.certificateName || "Ver Certificado Oficial Acreditado (50h)"}</span>
+                        <ExternalLink size={12} />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             );
@@ -154,11 +171,33 @@ export const Education: React.FC = () => {
             <span className="cert-bar-title">Certificaciones & Acreditaciones Clave:</span>
           </div>
           <div className="cert-tags-list">
-            {certifications.map((cert, idx) => (
-              <span key={idx} className="badge badge-green">
-                ✓ {cert}
-              </span>
-            ))}
+            {certifications.map((cert, idx) => {
+              const isObj = typeof cert === 'object';
+              const name = isObj ? cert.name : cert;
+              const url = isObj ? cert.url : undefined;
+
+              if (url) {
+                return (
+                  <a
+                    key={idx}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="badge badge-green badge-cert-link"
+                    title="Abrir Certificado Oficial Acreditado (PDF)"
+                  >
+                    <span>✓ {name}</span>
+                    <ExternalLink size={11} className="cert-ext-icon" />
+                  </a>
+                );
+              }
+
+              return (
+                <span key={idx} className="badge badge-green">
+                  ✓ {name}
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>

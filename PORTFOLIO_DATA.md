@@ -186,13 +186,14 @@
 
 | Periodo | Titulación / Formación | Centro / Institución | Temas Clave |
 |---|---|---|---|
-| **2026** | **Coding Bootcamp Málaga — Python Orientado a Inteligencia Artificial (IAPython_4)** | Fundación Conecta+ (antigua Fundación Esplai) | Python avanzado, POO, agentes autónomos (LangChain, LangGraph, Ollama, Groq), sistemas RAG con almacenamiento vectorial (ChromaDB), orientación laboral activa y desarrollo de soft skills |
+| **2026** | **Coding Bootcamp Málaga — Python Orientado a Inteligencia Artificial (IAPython_4)** | Fundación Conecta+ (antigua Fundación Esplai) | Python avanzado, POO, agentes autónomos (LangChain, LangGraph, Ollama, Groq), sistemas RAG con almacenamiento vectorial (ChromaDB), orientación laboral activa y soft skills. [Certificado Oficial (50h)](https://qxmbzzkqhjipbmmkioqt.supabase.co/storage/v1/object/public/certificados/Certificado_IA_Python_Mario_Garcia_Luque.pdf) |
 | **2024 – 2026** | **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)** | CPFP Alan Turing (Málaga) | Java, C#, Android Studio, patrones de arquitectura, desarrollo multiplataforma, bases de datos relacionales |
 | **12/2024 – 07/2025** | **Formación en Software y Algoritmia (Main Core)** | 42 Málaga (Fundación Telefónica) | Programación rigurosa en C, algoritmos de ordenación y búsqueda, gestión estricta de memoria, trabajo colaborativo P2P |
 | **2022 – 2024** | **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)** | I.E.S. Gerald Brenan (Málaga) | Desarrollo cliente/servidor, JavaScript, PHP, Laravel, SQL, arquitecturas web y despliegue |
 | **2020 – 2022** | **Ciclo Formativo de Grado Medio en Sistemas Microinformáticos y Redes (SMR)** | I.E.S. Gerald Brenan (Málaga) | Montaje y mantenimiento, redes locales, protocolos TCP/IP, seguridad básica, servidores Windows/Linux |
 
 ### Certificaciones Adicionales
+- **Certificado Oficial: IA con Python — 50h lectivas (Fundación Esplai / Conecta+):** [Ver Certificado PDF](https://qxmbzzkqhjipbmmkioqt.supabase.co/storage/v1/object/public/certificados/Certificado_IA_Python_Mario_Garcia_Luque.pdf)
 - **PHP: Fundamentos**
 - **Curso de HTML5 y CSS3**
 - **Permiso de conducir B**

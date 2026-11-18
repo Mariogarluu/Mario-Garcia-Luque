@@ -66,6 +66,12 @@ export interface RelatedProjectLink {
   buttonText: string;
 }
 
+export interface CertificationItem {
+  name: string;
+  url?: string;
+  isOfficial?: boolean;
+}
+
 export interface Education {
   id: string;
   degree: string;
@@ -76,6 +82,8 @@ export interface Education {
   topics: string;
   iconType: 'code' | 'terminal' | 'server' | 'network';
   relatedProject?: RelatedProjectLink;
+  certificateUrl?: string;
+  certificateName?: string;
 }
 
 export interface Service {
@@ -123,7 +131,7 @@ export interface PortfolioData {
   experience: Experience[];
   complementaryExperience: { role: string; organization: string; period: string; details: string }[];
   education: Education[];
-  certifications: string[];
+  certifications: (string | CertificationItem)[];
   testimonial: {
     author: string;
     role: string;
@@ -384,7 +392,9 @@ export const portfolioData: PortfolioData = {
         url: "#pokeestratega-ai",
         isExternal: false,
         buttonText: "Ver Proyecto PokeEstratega-AI"
-      }
+      },
+      certificateUrl: "/certificados/Certificado_IA_Python_Mario_Garcia_Luque.pdf",
+      certificateName: "Ver Certificado Oficial Acreditado (50h)"
     },
     {
       id: "dam",
@@ -452,6 +462,11 @@ export const portfolioData: PortfolioData = {
     }
   ],
   certifications: [
+    {
+      name: "Certificado Oficial: IA con Python — 50h lectivas (Fundación Esplai / Conecta+)",
+      url: "/certificados/Certificado_IA_Python_Mario_Garcia_Luque.pdf",
+      isOfficial: true
+    },
     "PHP: Fundamentos de Desarrollo",
     "Curso Avanzado de HTML5 y CSS3",
     "Permiso de conducir B y vehículo propio"

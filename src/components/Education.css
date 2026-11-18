@@ -302,6 +302,56 @@
   gap: 0.5rem;
 }
 
+/* Official Certificate Link Styling */
+.edu-certificate-box {
+  margin-top: 0.85rem;
+}
+
+.edu-cert-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-400);
+  background: var(--green-subtle);
+  border: 1px solid var(--border-green);
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.edu-cert-action:hover {
+  background: rgba(52, 211, 153, 0.22);
+  box-shadow: 0 0 14px var(--green-glow);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .edu-cert-action {
+  color: var(--green-600);
+}
+
+.badge-cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.badge-cert-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px var(--green-glow);
+  border-color: var(--green-400);
+}
+
+.cert-ext-icon {
+  opacity: 0.8;
+}
+
 /* Responsive adjustments for Education */
 @media (max-width: 640px) {
   .education-card {
