@@ -22,7 +22,7 @@ import './Projects.css';
 
 export const Projects: React.FC = () => {
   const { projects } = portfolioData;
-  const [filter, setFilter] = useState<'all' | 'fantasy' | 'dam' | 'bot'>('all');
+  const [filter, setFilter] = useState<'all' | 'ai' | 'fantasy' | 'dam' | 'bot'>('all');
   const [copiedKey, setCopiedKey] = useState(false);
 
   const filteredProjects = filter === 'all'
@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
             Proyectos <span className="gradient-text">Destacados</span>
           </h2>
           <p className="section-subtitle">
-            Software en producción y desarrollos reales: el simulador competitivo <strong>LoL Fantasy</strong> (Angular 19 & Supabase), la plataforma integral <strong>Meta Force</strong> (DAM · Multiplataforma) y la suite interactiva <strong>Bot de Música & Audio AI para Discord</strong>.
+            Software en producción y desarrollos reales: el asesor táctico <strong>PokeEstratega-AI</strong> (Python · LangGraph · LPUs Groq), el simulador competitivo <strong>LoL Fantasy</strong> (Angular 19 & Supabase), la plataforma integral <strong>Meta Force</strong> (DAM · Multiplataforma) y la suite interactiva <strong>Bot de Música & Audio AI para Discord</strong>.
           </p>
         </div>
 
@@ -59,6 +59,12 @@ export const Projects: React.FC = () => {
             className={`filter-tab-btn ${filter === 'all' ? 'active' : ''}`}
           >
             Todos ({projects.length})
+          </button>
+          <button
+            onClick={() => setFilter('ai')}
+            className={`filter-tab-btn ${filter === 'ai' ? 'active' : ''}`}
+          >
+            PokeEstratega-AI (Python · Agentes IA)
           </button>
           <button
             onClick={() => setFilter('fantasy')}
@@ -106,7 +112,9 @@ export const Projects: React.FC = () => {
                     {/* Floating Context & Status Badges */}
                     <div className="project-floating-badges">
                       <div className="project-category-badge-floating">
-                        {project.category === 'fantasy' ? (
+                        {project.category === 'ai' ? (
+                          <Sparkles size={13} style={{ color: '#38BDF8' }} />
+                        ) : project.category === 'fantasy' ? (
                           <Trophy size={13} style={{ color: '#E5C158' }} />
                         ) : isMetaForce ? (
                           <GraduationCap size={13} className="context-icon purple" />

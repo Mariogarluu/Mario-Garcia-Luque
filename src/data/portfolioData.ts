@@ -22,11 +22,11 @@ export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  contextType: 'dam' | '42malaga' | 'personal' | 'laboral';
+  contextType: 'dam' | '42malaga' | 'personal' | 'laboral' | 'bootcamp';
   contextLabel: string;
   roleInProject: string;
   collaborators?: ProjectCollaborator[];
-  category: 'dam' | 'bot' | 'fantasy' | 'all';
+  category: 'dam' | 'bot' | 'fantasy' | 'ai' | 'all';
   description: string;
   technologies: string[];
   demoUrl?: string;
@@ -378,12 +378,12 @@ export const portfolioData: PortfolioData = {
       topics: "Python avanzado, programación orientada a objetos, arquitectura de agentes autónomos (LangChain, LangGraph), integración de modelos locales y cloud (Ollama, Groq), sistemas RAG con almacenamiento vectorial persistente (ChromaDB), orientación laboral activa y desarrollo de soft skills.",
       iconType: "terminal",
       relatedProject: {
-        name: "Coding Bootcamp Málaga · Python & IA",
-        badge: "Bootcamp IAPython_4",
-        description: "Meta-repositorio estructurado con submódulos Git: agentes autónomos ReAct, pipelines RAG con ChromaDB, integración con Ollama/Groq y scripts de automatización.",
-        url: "https://github.com/Mariogarluu/Bootcamp-Python",
-        isExternal: true,
-        buttonText: "Ver Código en GitHub"
+        name: "PokeEstratega-AI · Asesor Táctico & Teambuilder IA",
+        badge: "Proyecto Final Bootcamp",
+        description: "Asesor táctico competitivo (1.003 Pokémon Añil) con LangGraph, Groq LPUs (~200 ms), motor determinista sin alucinaciones, teambuilder interactivo y exportador Pokémon Showdown.",
+        url: "#pokeestratega-ai",
+        isExternal: false,
+        buttonText: "Ver Proyecto PokeEstratega-AI"
       }
     },
     {
@@ -466,6 +466,45 @@ export const portfolioData: PortfolioData = {
     text: "Mario demostró una gran capacidad técnica, especialmente en el ámbito del desarrollo Frontend y la Inteligencia Artificial, participando activamente en la evolución de nuestros proyectos y aportando soluciones eficaces a los retos del día a día. Además de sus conocimientos, destacaría su actitud proactiva, su capacidad de aprendizaje y su facilidad para integrarse y colaborar con el equipo. Siempre mostró un alto nivel de compromiso y una clara orientación a la calidad en su trabajo."
   },
   projects: [
+    {
+      id: "pokeestratega-ai",
+      title: "PokeEstratega-AI · Asesor Táctico & Teambuilder Competitivo",
+      subtitle: "Plataforma de IA Táctica, Pokédex Competitiva Añil y Motor Determinista de Tipos",
+      contextType: "bootcamp",
+      contextLabel: "Proyecto Final · Coding Bootcamp Python & IA (Conecta+)",
+      roleInProject: "Desarrollador Full Stack & Arquitectura de Agentes IA",
+      category: "ai",
+      image: "/projects/pokeestratega.jpg",
+      statusType: "active",
+      demoUrl: "https://pokeestratega-ai.onrender.com/",
+      githubUrl: "https://github.com/Mariogarluu/PokeEstratega-AI",
+      repositories: [
+        { label: "Repositorio PokeEstratega-AI", url: "https://github.com/Mariogarluu/PokeEstratega-AI", badge: "FastAPI + LangGraph" },
+        { label: "Meta-Repo Bootcamp", url: "https://github.com/Mariogarluu/Bootcamp-Python", badge: "IAPython_4" }
+      ],
+      description: "Plataforma web de análisis y asesoramiento táctico para combates competitivos de Pokémon desarrollada como proyecto final del Coding Bootcamp Málaga de Fundación Conecta+. Integra una Pokédex completa de 1.003 Pokémon con estadísticas y movesets de Pokémon Añil, 705 movimientos categorizados, y un motor matemático determinista de cálculo de efectividades y debilidades de 18 tipos elementales (0% alucinaciones). Cuenta con un Teambuilder interactivo de 4 pestañas con soporte Drag & Drop nativo HTML5, un agente decisional con LangGraph desplegado sobre LPUs de Groq (qwen/qwen3.8-27b y fallback llama-3.3-70b-versatile con latencia de ~200 ms), exportador a formato oficial de Pokémon Showdown y contenedorización Docker lista para producción.",
+      technologies: [
+        "Python 3.11",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "Groq LPUs",
+        "Ollama (Local Fallback)",
+        "Pillow (Sprite Engine)",
+        "HTML5 / CSS3 / JavaScript",
+        "Docker",
+        "Render.com"
+      ],
+      highlights: [
+        "Arquitectura de Agentes con LangGraph: Grafo decisional con guardrails estrictos de dominio (rechazo de consultas no-Pokémon), inyección de contexto de equipo y streaming de recomendaciones tácticas.",
+        "Inferencia de Ultra Baja Latencia con Groq LPUs: Procesamiento a ~200 ms mediante qwen/qwen3.8-27b y fallback a llama-3.3-70b-versatile, con soporte local opcional vía Ollama.",
+        "Motor de Daño Determinista Zero-Hallucination: Algoritmo matricial de 18 tipos elementales que calcula debilidades compuestas (x4, x2, x0.5, x0.25, x0) matemáticamente antes de alimentar el prompt del LLM.",
+        "Teambuilder Táctico 4-Tabs & Pokédex Añil: Interfaz interactiva con Pokédex de 1.003 criaturas y 705 movimientos, gestión de equipo mediante Drag & Drop, radar de cobertura de tipos y balance de debilidades en tiempo real.",
+        "Procesamiento de Sprites con Pillow: Pipeline de centrado y recorte automático 1:1 de sprites oficiales para una presentación visual limpia y consistente.",
+        "Exportador Pokémon Showdown & Despliegue en Render: Generación de formato estándar exportable a simuladores competitivos y despliegue contenerizado en Docker en Render (pokeestratega-ai.onrender.com)."
+      ],
+      featured: true
+    },
     {
       id: "lol-fantasy",
       title: "LoL Fantasy · Esports Manager & Pro-dle (Temporada 2026)",

@@ -125,7 +125,22 @@
 
 ## 6. Proyectos Destacados (Featured Projects)
 
-### 1. Meta Force — Plataforma Deportiva Integral
+### 1. PokeEstratega-AI — Asesor Táctico & Teambuilder Competitivo
+- **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Arquitectura de Agentes IA
+- **Categoría:** Inteligencia Artificial / Agentes Autónomos / Full Stack
+- **Tecnologías:** `Python 3.11` `FastAPI` `LangGraph` `LangChain` `Groq LPUs` `Ollama` `Docker` `Render.com`
+- **Enlace demo / producción:** [https://pokeestratega-ai.onrender.com/](https://pokeestratega-ai.onrender.com/)
+- **Enlace código / GitHub:** [https://github.com/Mariogarluu/PokeEstratega-AI](https://github.com/Mariogarluu/PokeEstratega-AI)
+- **Descripción:** Plataforma web de análisis y asesoramiento táctico para combates competitivos de Pokémon desarrollada como proyecto final del Coding Bootcamp Málaga de Fundación Conecta+. Integra una Pokédex completa de 1.003 Pokémon con estadísticas y movesets de Pokémon Añil, 705 movimientos categorizados, y un motor matemático determinista de cálculo de efectividades y debilidades de 18 tipos elementales (0% alucinaciones). Cuenta con un Teambuilder interactivo de 4 pestañas con soporte Drag & Drop nativo HTML5, un agente decisional con LangGraph desplegado sobre LPUs de Groq (qwen/qwen3.8-27b y fallback llama-3.3-70b-versatile con latencia de ~200 ms), exportador a formato oficial de Pokémon Showdown y contenedorización Docker lista para producción.
+- **Puntos clave / Logros:**
+  - **Arquitectura de Agentes con LangGraph:** Grafo decisional con guardrails estrictos de dominio (rechazo de consultas ajenas a Pokémon), inyección de contexto de equipo en tiempo real y streaming de recomendaciones tácticas.
+  - **Inferencia de Ultra Baja Latencia con Groq LPUs:** Procesamiento en ~200 ms mediante `qwen/qwen3.8-27b` y fallback a `llama-3.3-70b-versatile`, con soporte local opcional vía Ollama.
+  - **Motor de Daño Determinista Zero-Hallucination:** Algoritmo matricial de 18 tipos elementales que calcula debilidades compuestas (x4, x2, x0.5, x0.25, x0) matemáticamente antes de alimentar el prompt del LLM.
+  - **Teambuilder Táctico 4-Tabs & Pokédex Añil:** Interfaz interactiva con Pokédex de 1.003 criaturas y 705 movimientos, gestión de equipo mediante Drag & Drop nativo, radar de cobertura de tipos y balance de debilidades en tiempo real.
+  - **Procesamiento de Sprites con Pillow:** Pipeline de centrado y recorte automático 1:1 de sprites oficiales para una presentación visual limpia y consistente.
+  - **Exportador Pokémon Showdown & Despliegue en Render:** Generación de formato estándar exportable a simuladores competitivos y despliegue contenerizado en Docker en Render.
+
+### 2. Meta Force — Plataforma Deportiva Integral
 - **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Multiplataforma
 - **Categoría:** Full Stack / Mobile / BaaS
 - **Tecnologías:** `Angular 19` `Kotlin (Android)` `Supabase` `PostgreSQL` `Deno Edge Functions` `Inteligencia Artificial`
@@ -138,7 +153,7 @@
   - Asistente inteligente integrado con IA para personalización de rutinas, seguimiento de objetivos y análisis de rendimiento deportivo.
   - Sincronización en tiempo real entre cliente web y app móvil nativa.
 
-### 2. LoL Fantasy & Esports Hub (Temporada 2026)
+### 3. LoL Fantasy & Esports Hub (Temporada 2026)
 - **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Motor Táctico
 - **Categoría:** Full Stack / Web Gaming / Algoritmia
 - **Tecnologías:** `Angular 19` `TypeScript 5.7` `Supabase` `PostgreSQL` `Tailwind CSS` `Fearless Draft`
@@ -151,7 +166,7 @@
   - **Minijuego Pro-dle:** Desafío de deducción estilo Wordle (Daily y Endless) con comparación dinámica de región, rol, club, media OVR y nacionalidad.
   - **Base de datos & Sandbox 5v5:** +380 jugadores profesionales con estadísticas detalladas y herramienta de simulación libre con cálculo de química y visualizador en directo.
 
-### 3. Bot de Música & Audio Suite con IA para Discord
+### 4. Bot de Música & Audio Suite con IA para Discord
 - **Subtítulo / Rol:** Creador & Desarrollador Full Stack / Audio Engine & IA
 - **Categoría:** Audio Streaming / IA / Backend & Bot
 - **Tecnologías:** `Node.js` `Discord.js v14` `@discordjs/voice` `FFmpeg` `Edge-TTS (Voces IA)` `Spotify API` `PM2`
